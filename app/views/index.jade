@@ -1,6 +1,7 @@
 extends layouts/default
 
 block content
-  section(data-ng-view)
+  div.slider-container
+    section(data-ng-view).sliders
   script(type="text/javascript").
     window.user = !{user};

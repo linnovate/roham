@@ -23,3 +23,40 @@ footer {
 footer p {
     padding:5px 0 12px 10px
 }
+
+.slider-container {
+  position:relative;
+}
+.sliders.ng-enter, .sliders.ng-leave {
+  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:600px;
+}
+
+.sliders.ng-enter {
+  z-index:100;
+  top:600px;
+  opacity:0;
+}
+.sliders.ng-enter.ng-enter-active {
+  top:0;
+  opacity:1;
+}
+
+.sliders.ng-leave {
+  z-index:101;
+  top:0;
+  opacity:1;
+}
+.sliders.ng-leave.ng-leave-active {
+  top:-600px;
+  opacity:0;
+}
+
