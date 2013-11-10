@@ -24,55 +24,39 @@ footer p {
     padding:5px 0 12px 10px
 }
 
-.slide{
-    display:none;
-    
+.slider-container {
+  position:relative;
+}
+.sliders.ng-enter, .sliders.ng-leave {
+  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:600px;
 }
 
-.slide.visible{
-    display: block;
-    margin-top: 0;    
-    transition: margin-top 2s;
-    -webkit-transition: margin-top 2s;;
-    
+.sliders.ng-enter {
+  z-index:100;
+  top:600px;
+  opacity:0;
+}
+.sliders.ng-enter.ng-enter-active {
+  top:0;
+  opacity:1;
 }
 
-.slide.hidden{
-    display: block;
-    margin-top: 1000px;
-
-    
+.sliders.ng-leave {
+  z-index:101;
+  top:0;
+  opacity:1;
+}
+.sliders.ng-leave.ng-leave-active {
+  top:-600px;
+  opacity:0;
 }
 
-.ng-enter {
-  -webkit-transition: 1s;
-  transition: 1s;
-  
-  margin-left: 100%;
-}
-
-.ng-enter-active {
-  margin-left: 0;
-}
-
-.ng-leave {
-  -webkit-transition: 1s;
-  transition: 1s;
-  
-  margin-left: 0;
-}
-
-.ng-leave-active {
-  margin-left: 100%;
-}
-
-.ng-move {
-  -webkit-transition: 1s;
-  transition: 1s;
-  
-  background: gold;
-}
-
-.ng-move-active {
-  background: #fff;
-}
