@@ -8,9 +8,15 @@ window.app.config(['$routeProvider',
         when('/slide_2', {
             templateUrl: 'views/slides/slide_2.html',
         }).
+        when('/slide_3', {
+            templateUrl: 'views/slides/slide_3.html',
+        }).
+        when('/slide_4', {
+            templateUrl: 'views/slides/slide_4.html',
+        }).
         otherwise({
             redirectTo: '/',
-            templateUrl: 'views/index.html'
+            templateUrl: 'views/slides/slide_1.html',
         });
     }
 ]);
