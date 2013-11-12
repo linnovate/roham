@@ -23,12 +23,16 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-              files: ['public/css/sass/*.scss'],
-              tasks: ['compass'],
-              options: {
-                livereload: true,
-              },
+              files: ['public/sass/*.scss'],
+              tasks: ['compass']            
             }            
+        },
+        compass: {                  // Task
+          options: {              // Target options
+              sassDir: 'public/sass/',
+              cssDir: 'public/css/views/',
+              environment: 'production'
+            }
         },
         jshint: {
             all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
@@ -70,19 +74,19 @@ module.exports = function(grunt) {
     });
 
     //Load NPM tasks 
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-env');
 
     //Making grunt default to force in order not to break the project.
-    grunt.option('force', true);
-
+    
+    grunt.registerTask('my', ['compass']);
     //Default task(s).
-    grunt.registerTask('default', ['jshint', 'concurrent', 'compass']);
+    grunt.registerTask('default', ['concurrent', 'compass']);
 
     //Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest']);

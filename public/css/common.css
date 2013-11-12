@@ -44,23 +44,41 @@
   height:100%;
 }
 
-.sliders.ng-enter {
+.sliders.forward.ng-enter {
   z-index:100;
   top:100%;
   
 }
-.sliders.ng-enter.ng-enter-active {
+.sliders.forward.ng-enter.ng-enter-active {
   top:0;
   
 }
 
-.sliders.ng-leave {
+.sliders.forward.ng-leave {
   z-index:101;
   top:0;
   
 }
-.sliders.ng-leave.ng-leave-active {
+.sliders.forward.ng-leave.ng-leave-active {
   top:-100%;
-  
+}
+
+
+.sliders.back.ng-enter {
+  z-index:101;
+  top:-100%; 
+}
+
+.sliders.back.ng-enter.ng-enter-active {  
+  top:0;
+}
+
+.sliders.back.ng-leave {
+  z-index:100;
+  top:0;
+}
+
+.sliders.back.ng-leave.ng-leave-active {
+  top:100%;  
 }
 

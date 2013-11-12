@@ -16,7 +16,7 @@ window.app.config(['$routeProvider',
         }).
         otherwise({
             redirectTo: '/',
-            templateUrl: 'views/slides/slide_1.html',
+            templateUrl: 'views/index.html',
         });
     }
 ]);

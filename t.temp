@@ -1,0 +1,1158 @@
+[4mInitializing[24m
+Command-line options: [36m--verbose[39m
+
+Reading "gruntfile.js" Gruntfile...[32mOK[39m
+
+[1mRegistering Gruntfile tasks.[22m
+Reading package.json...[32mOK[39m
+Parsing package.json...[32mOK[39m
+Initializing config...[32mOK[39m
+
+[1mRegistering "grunt-contrib-watch" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-contrib-watch/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-contrib-watch/package.json...[32mOK[39m
+Loading "watch.js" tasks...[32mOK[39m
++ [36mwatch[39m
+
+[1mRegistering "grunt-contrib-jshint" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-contrib-jshint/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-contrib-jshint/package.json...[32mOK[39m
+Loading "jshint.js" tasks...[32mOK[39m
++ [36mjshint[39m
+
+[1mRegistering "grunt-mocha-test" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-mocha-test/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-mocha-test/package.json...[32mOK[39m
+Loading "mocha.js" tasks...[32mOK[39m
++ [36mmochaTest[39m
+
+[1mRegistering "grunt-nodemon" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-nodemon/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-nodemon/package.json...[32mOK[39m
+Loading "nodemon.js" tasks...[32mOK[39m
++ [36mnodemon[39m
+
+[1mRegistering "grunt-concurrent" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-concurrent/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-concurrent/package.json...[32mOK[39m
+Loading "concurrent.js" tasks...[32mOK[39m
++ [36mconcurrent[39m
+
+[1mRegistering "grunt-contrib-compass" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-contrib-compass/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-contrib-compass/package.json...[32mOK[39m
+Loading "compass.js" tasks...[32mOK[39m
++ [36mcompass[39m
+
+[1mRegistering "grunt-env" local Npm module tasks.[22m
+Reading /Users/roie/Sites/roham/node_modules/grunt-env/package.json...[32mOK[39m
+Parsing /Users/roie/Sites/roham/node_modules/grunt-env/package.json...[32mOK[39m
+Loading "env.js" tasks...[32mOK[39m
++ [36menv[39m
+Loading "gruntfile.js" tasks...[32mOK[39m
++ [36mcompass[39m, [36mdefault[39m, [36mtest[39m
+
+Running tasks: [36mcompass[39m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+
+[4mRunning "compass" task[24m
+[33mWarning: Maximum call stack size exceeded Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m

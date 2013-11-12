@@ -3,7 +3,10 @@ window.bootstrap = function() {
 };
 
 window.init = function() {
-    window.bootstrap();
+    window.bootstrap(function($rootScope){
+    	$rootScope.transitionClass = "forward";
+    });
+    
 };
 
 angular.element(document).ready(function() {
