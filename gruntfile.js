@@ -31,20 +31,20 @@ module.exports = function(grunt) {
             }            
         },
         compass: {                  // Task
-      dist: {                   // Target
-        options: {              // Target options
-          sassDir: 'public/css/sass',
-          cssDir: 'public/css/views',
-          environment: 'production'
-        }
-      },
-      dev: {                    // Another target
-        options: {
-          sassDir: 'public/css/sass',
-          cssDir: 'public/css/views'
-        }
-      }
-    },
+          dist: {                   // Target
+            options: {              // Target options
+              sassDir: 'public/css/sass',
+              cssDir: 'public/css/views',
+              environment: 'production'
+            }
+          },
+          dev: {                    // Another target
+            options: {
+              sassDir: 'public/css/sass',
+              cssDir: 'public/css/views'
+            }
+          }
+        },
         jshint: {
             all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
         },

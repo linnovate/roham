@@ -1,15 +1,143 @@
-.slide_1  {
-	.bigTitle {
-		font-size: 65px;
-		font-weight: bold;
-		font-family: alef;
-		color: #010000;
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+
+body{
+  font-family: "Alef Hebrew",
+               “Helvetica Neue”,
+               Helvetica,
+               Arial,
+               sans-serif;
+}
+
+.content {    
+    width:100%
+}
+
+
+.slider-container {
+    
+}
+
+.slide{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.index{
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjIxIiBzdG9wLWNvbG9yPSIjZDBlMmY2Ii8+PHN0b3Agb2Zmc2V0PSIwLjgyIiBzdG9wLWNvbG9yPSIjYjRkMGVmIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNiNGQwZWYiIC8+PHJlY3QgeD0iMCUiIHk9Ii0xMy4wODQxJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTI2LjE2ODIlIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==);
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 338, color-stop(21%, #d0e2f6), color-stop(82%, #b4d0ef));
+  background-image: -webkit-radial-gradient(center center, farthest-side circle, #d0e2f6 21%, #b4d0ef 82%);
+  background-image: -moz-radial-gradient(center center, farthest-side circle, #d0e2f6 21%, #b4d0ef 82%);
+  background-image: -ms-radial-gradient(center center, farthest-side circle, #d0e2f6 21%, #b4d0ef 82%);
+  background-image: -o-radial-gradient(center center, farthest-side circle, #d0e2f6 21%, #b4d0ef 82%);
+  background-image: radial-gradient(farthest-side circle at center center, #d0e2f6 21%, #b4d0ef 82%);
+
+}
+
+
+
+
+.sliders{
+	.slide_1{
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjM4MjQ5MyIgc3RvcC1jb2xvcj0iIzI5Njg3NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE1NDk1NyIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTU0OTU3IiAvPjxyZWN0IHg9Ii0zLjU5NTglIiB5PSItMTcuNjIwOSUiIHdpZHRoPSIxMDcuMTkxNiUiIGhlaWdodD0iMTM1LjI0MTclIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==);
+		background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 362, color-stop(38.2493%, #296875), color-stop(100%, #154957));
+		background-image: -webkit-radial-gradient(center center, farthest-side circle, #296875 41%, #154957 107.1916%);
+		background-image: -moz-radial-gradient(center center, farthest-side circle, #296875 41%, #154957 107.1916%);
+		background-image: -ms-radial-gradient(center center, farthest-side circle, #296875 41%, #154957 107.1916%);
+		background-image: -o-radial-gradient(center center, farthest-side circle, #296875 41%, #154957 107.1916%);
+		background-image: radial-gradient(farthest-side circle at center center, #296875 41%, #154957 107.1916%);
+		color: white;
+		
+		.bigTitle {
+			font-size: 65px;
+			font-weight: bold;				
+		}
 	}
+
+	.slide_2,.slide_3{
+	  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iIzQ2NDY0NiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJiMmIyYiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmIyYjJiIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=);
+	  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 520, color-stop(42.8039%, #464646), color-stop(100%, #2b2b2b));
+	  background-image: -webkit-radial-gradient(center center, farthest-side circle, #464646 66%, #2b2b2b 154.1916%);
+	  background-image: -moz-radial-gradient(center center, farthest-side circle, #464646 66%, #2b2b2b 154.1916%);
+	  background-image: -ms-radial-gradient(center center, farthest-side circle, #464646 66%, #2b2b2b 154.1916%);
+	  background-image: -o-radial-gradient(center center, farthest-side circle, #464646 66%, #2b2b2b 154.1916%);
+	  background-image: radial-gradient(farthest-side circle at center center, #464646 66%, #2b2b2b 154.1916%);
+	  color: white;
+	}
+
+
+	.slide_4{
+	  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iI2VhZTllOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U0ZTJlMiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTRlMmUyIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=);
+	  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 520, color-stop(42.8039%, #eae9e9), color-stop(100%, #e4e2e2));
+	  background-image: -webkit-radial-gradient(center center, farthest-side circle, #eae9e9 66%, #e4e2e2 154.1916%);
+	  background-image: -moz-radial-gradient(center center, farthest-side circle, #eae9e9 66%, #e4e2e2 154.1916%);
+	  background-image: -ms-radial-gradient(center center, farthest-side circle, #eae9e9 66%, #e4e2e2 154.1916%);
+	  background-image: -o-radial-gradient(center center, farthest-side circle, #eae9e9 66%, #e4e2e2 154.1916%);
+	  background-image: radial-gradient(farthest-side circle at center center, #eae9e9 66%, #e4e2e2 154.1916%);
+	  
+	}
+
+	&.ng-enter, &.ng-leave {
+	  -webkit-transition:0.7s ease-in all;
+	  -moz-transition:0.7s ease-in all;
+	  -o-transition:0.7s ease-in all;
+	  transition:0.7s ease-in all;
+
+	  position:absolute;
+	  top:0;
+	  left:0;
+	  right:0;
+	  height:100%;
+	}
+	&.forward{
+		&.ng-enter {
+		  z-index:100;
+		  top:100%;
+		  
+		}
+		&.ng-enter.ng-enter-active {
+		  top:0;		  
+		}
+
+		&.ng-leave {
+		  z-index:101;
+		  top:0;
+		  
+		}
+		&.ng-leave.ng-leave-active {
+		  top:-100%;
+		}
+	}
+	
+
+	&.back{
+		&.ng-enter {
+		  z-index:101;
+		  top:-100%; 
+		}
+
+		&.ng-enter.ng-enter-active {  
+		  top:0;
+		}
+
+		&.ng-leave {
+		  z-index:100;
+		  top:0;
+		}
+
+		&.ng-leave.ng-leave-active {
+		  top:100%;  
+		}		
+	}
+	
 }
 
 .btn_link{
-
-width: 290px;
-height: 74px;
-background-image:url(../img/buttons/begin-btt.png);
+	width: 290px;
+	height: 74px;
+	background-image:url(../img/buttons/begin-btt.png);
 }
+
+
+
+

@@ -1,18 +1,18 @@
 window.bootstrap = function() {
-    angular.bootstrap(document, ['mean']);
+	angular.bootstrap(document, ['mean']);
 };
 
 window.init = function() {
-    window.bootstrap(function($rootScope){
-    	$rootScope.transitionClass = "forward";
-    });
-    
+	window.bootstrap(function($rootScope) {
+		$rootScope.transitionClass = "forward";
+	});
+
 };
 
 angular.element(document).ready(function() {
-    //Fixing facebook bug with redirect
-    if (window.location.hash == "#_=_") window.location.hash = "";
+	//Fixing facebook bug with redirect
+	if (window.location.hash == "#_=_") window.location.hash = "";
 
-    //Then init the app
-    window.init();
+	//Then init the app
+	window.init();
 });
