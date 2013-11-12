@@ -27,62 +27,62 @@ module.exports = function(grunt) {
               tasks: ['compass'],
               options: {
                 livereload: true,
-              },
-            }            
-        },
+            },
+        }            
+    },
         compass: {                  // Task
       dist: {                   // Target
         options: {              // Target options
           sassDir: 'public/css/sass',
           cssDir: 'public/css/views',
           environment: 'production'
-        }
-      },
+      }
+  },
       dev: {                    // Another target
         options: {
           sassDir: 'public/css/sass',
           cssDir: 'public/css/views'
-        }
       }
-    },
-        jshint: {
-            all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
-        },
-        nodemon: {
-            dev: {
-                options: {
-                    file: 'server.js',
-                    args: [],
-                    ignoredFiles: ['README.md', 'node_modules/**', '.DS_Store'],
-                    watchedExtensions: ['js'],
-                    watchedFolders: ['app', 'config'],
-                    debug: true,
-                    delayTime: 1,
-                    env: {
-                        PORT: 3000
-                    },
-                    cwd: __dirname
-                }
-            }
-        },
-        concurrent: {
-            tasks: ['nodemon', 'watch'], 
-            options: {
-                logConcurrentOutput: true
-            }
-        },
-        mochaTest: {
-            options: {
-                reporter: 'spec'
+  }
+},
+jshint: {
+    all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
+},
+nodemon: {
+    dev: {
+        options: {
+            file: 'server.js',
+            args: [],
+            ignoredFiles: ['README.md', 'node_modules/**', '.DS_Store'],
+            watchedExtensions: ['js'],
+            watchedFolders: ['app', 'config'],
+            debug: true,
+            delayTime: 1,
+            env: {
+                PORT: 3000
             },
-            src: ['test/**/*.js']
-        },
-        env: {
-            test: {
-                NODE_ENV: 'test'
-            }
+            cwd: __dirname
         }
-    });
+    }
+},
+concurrent: {
+    tasks: ['nodemon', 'watch'], 
+    options: {
+        logConcurrentOutput: true
+    }
+},
+mochaTest: {
+    options: {
+        reporter: 'spec'
+    },
+    src: ['test/**/*.js']
+},
+env: {
+    test: {
+        NODE_ENV: 'test'
+    }
+}
+});
 
     //Load NPM tasks 
     grunt.loadNpmTasks('grunt-contrib-watch');
