@@ -1,4 +1,32 @@
-<section class="slide slide_1">
-<a href="/#!/slide_2">Next</a>
-</div>	
+<section data-ng-controller="IndexController" ng-class="$root.transitionClass" class="slide slide_1">
+	<div class="content_slide_1">
+		<img src="../../img/background/israel-logo-blue.1.png" class="logo_img">
+		<h1 > <small class="title">שאלות קצרות, לפני שנתחיל</small></h1>
+		<div class="body center-block">
+			    <div class="btn-group age">
+
+        <button type="button" class="btn btn_grey change" ng-model="age.65+" data-ng-class="my_class" data-ng-click="my_class='btn_green'">מעל 65</button>
+        <button type="button" class="btn btn_grey change" ng-model="age.50-64" data-ng-class="{ 'active': isActiveBtn[0]}" data-ng-click="isActiveBtn[0]=true"  >50-64</button>
+        <button type="button" class="btn btn_grey" ng-model="age.30-46" >30-49</button>
+        <button type="button" class="btn btn_grey" ng-model="age.18-19" >18-19</button>
+        <button type="button" class="btn btn_grey" ng-model="age.18-" >מתחת ל18</button>
+    </div>
+</br>
+    			    <div class="btn-group kind">
+
+        <button type="button" class="btn btn_grey" ng-model="kind.male" >זכר</button>
+        <button type="button" class="btn btn_grey" ng-model="kind.female" >נקבה</button>
+    </div>
+    </br>
+    			    <div class="btn-group status">	
+
+        <button type="button" class="btn btn_grey" ng-model="status.single" >רווק/ה</button>
+        <button type="button" class="btn btn_grey" ng-model="status.married" >נשואי/אה</button>
+        <button type="button" class="btn btn_grey" ng-model="status.deportation" >גרוש/ה</button>
+        <button type="button" class="btn btn_grey" ng-model="status.widower" >אלמן/נה</button>
+    </div>
+		</div>
+	</div>
+</br>
+<a class="btn_link_slide_1" href="/#!/slide_2">Next</a>
 </section>
