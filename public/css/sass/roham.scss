@@ -1,13 +1,18 @@
-.slide_1 .content{
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+@import "compass";
 
-	.logo_slider1 {
-		margin-top: 30px;
-		margin-left: 62px;
-	}
+
+body{
+  font-family: "Alef Hebrew",
+               “Helvetica Neue”,
+               Helvetica,
+               Arial,
+               sans-serif;                        
+}
+
+.slide_1 .content_slider_1{
 	h1 {
-		font-family: alef;
 		color: #010000;
-
 	}
 	.title {
 		font-size: 55px;
@@ -28,6 +33,7 @@
 	p {
 		font-size: 25px;
 		text-align: right;
+		color: #000104;
 	}
 	a.btn_link{
 		width: 294px;
@@ -50,33 +56,8 @@
 	}
 }
 
-.slide_1 {
-	height: auto;
-	background-image: url(../../img/background/israel-logo.png);
-	background-repeat: no-repeat;
-	background-position-x: 30px;
-	background-position-y: 62px;
-
-}
-
-@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
-@import "compass";
-
-body{
-  font-family: "Alef Hebrew",
-               “Helvetica Neue”,
-               Helvetica,
-               Arial,
-               sans-serif;
-}
-
 .content {    
     width:100%
-}
-
-
-.slider-container {
-    
 }
 
 .slide{
@@ -93,17 +74,17 @@ body{
 
 
 
+/*Background to sliders*/
+/***********************/
 
 .sliders{
 	.slide_1{
 		@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjM4MjQ5MyIgc3RvcC1jb2xvcj0iIzI5Njg3NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE1NDk1NyIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTU0OTU3IiAvPjxyZWN0IHg9Ii0zLjU5NTglIiB5PSItMTcuNjIwOSUiIHdpZHRoPSIxMDcuMTkxNiUiIGhlaWdodD0iMTM1LjI0MTclIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
-		radial-gradient(farthest-side circle at center center, #296875 41%, #154957 107.1916%));				
-		color: white;
-		
-		.bigTitle {
-			font-size: 65px;
-			font-weight: bold;				
-		}
+		radial-gradient(farthest-side circle at center center, #296875 41%, #154957 107.1916%));
+/*		background-image: url(../../img/background/israel-logo.png);
+		background-repeat: no-repeat;
+		background-position-x: 30px;
+		background-position-y: 62px;*/				
 	}
 
 	.slide_2,.slide_3{
@@ -111,7 +92,6 @@ body{
 		radial-gradient(farthest-side circle at center center, #464646 66%, #2b2b2b 154.1916%));
 	 	color: white;
 	}
-
 
 	.slide_4{
 		@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iI2VhZTllOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U0ZTJlMiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTRlMmUyIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=),
@@ -133,24 +113,22 @@ body{
 	&.forward{
 		&.ng-enter {
 		  z-index:100;
-		  top:100%;
-		  
+		  top:100%; 
 		}
+
 		&.ng-enter.ng-enter-active {
 		  top:0;		  
 		}
 
 		&.ng-leave {
 		  z-index:101;
-		  top:0;
-		  
+		  top:0;  
 		}
+
 		&.ng-leave.ng-leave-active {
 		  top:-100%;
 		}
 	}
-	
-
 	&.back{
 		&.ng-enter {
 		  z-index:101;
@@ -173,10 +151,5 @@ body{
 	
 }
 
-.btn_link{
-	width: 290px;
-	height: 74px;
-	background-image:url(../img/buttons/begin-btt.png);
-}
 
 

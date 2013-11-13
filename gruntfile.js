@@ -1,3 +1,4 @@
+module.exports = function(grunt) {
     // Project Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -26,9 +27,9 @@
               tasks: ['compass'],
               options: {
                 livereload: true,
-            },
-        }            
-    },
+              },
+            }            
+        },
         compass: {                  // Task
           dist: {                   // Target
             options: {              // Target options
@@ -73,30 +74,15 @@
         mochaTest: {
             options: {
                 reporter: 'spec'
->>>>>>> 807c0f2ee5f0ac8b8d251d32f7ea3315435e0397
             },
-            cwd: __dirname
+            src: ['test/**/*.js']
+        },
+        env: {
+            test: {
+                NODE_ENV: 'test'
+            }
         }
-    }
-},
-concurrent: {
-    tasks: ['nodemon', 'watch'], 
-    options: {
-        logConcurrentOutput: true
-    }
-},
-mochaTest: {
-    options: {
-        reporter: 'spec'
-    },
-    src: ['test/**/*.js']
-},
-env: {
-    test: {
-        NODE_ENV: 'test'
-    }
-}
-});
+    });
 
     //Load NPM tasks 
     grunt.loadNpmTasks('grunt-contrib-watch');
