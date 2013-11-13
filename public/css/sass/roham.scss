@@ -10,8 +10,13 @@ body{
                sans-serif;                        
 }
 
-.slide_1 .content_slider_1{
-	h1 {
+.slide .content_slide{
+
+	.logo_img {
+		margin-left: 62px;
+		margin-top: 30px;
+	}
+	h1,h1 small{
 		color: #010000;
 	}
 	.title {
@@ -20,7 +25,7 @@ body{
 	.bigTitle {
 		font-size: 65px;
 		font-weight: bold;
-		margin-top: 136px;
+		margin-top: -36px;
 	}
 	.body {
 		margin-top:72px;
@@ -69,7 +74,11 @@ body{
 .index{
 
 	@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjIxIiBzdG9wLWNvbG9yPSIjZDBlMmY2Ii8+PHN0b3Agb2Zmc2V0PSIwLjgyIiBzdG9wLWNvbG9yPSIjYjRkMGVmIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNiNGQwZWYiIC8+PHJlY3QgeD0iMCUiIHk9Ii0xMy4wODQxJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTI2LjE2ODIlIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
-		radial-gradient(farthest-side circle at center center, #d0e2f6 21%, #b4d0ef 82%));	
+		radial-gradient(farthest-side circle at center center, #d0e2f6 21%, #b4d0ef 82%));
+/*		background-image: url(../../img/background/israel-logo.png);
+		background-repeat: no-repeat;
+		background-position-x: 30px;
+		background-position-y: 62px;*/		
 }
 
 
@@ -81,10 +90,7 @@ body{
 	.slide_1{
 		@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjM4MjQ5MyIgc3RvcC1jb2xvcj0iIzI5Njg3NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE1NDk1NyIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTU0OTU3IiAvPjxyZWN0IHg9Ii0zLjU5NTglIiB5PSItMTcuNjIwOSUiIHdpZHRoPSIxMDcuMTkxNiUiIGhlaWdodD0iMTM1LjI0MTclIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
 		radial-gradient(farthest-side circle at center center, #296875 41%, #154957 107.1916%));
-/*		background-image: url(../../img/background/israel-logo.png);
-		background-repeat: no-repeat;
-		background-position-x: 30px;
-		background-position-y: 62px;*/				
+		color: white;			
 	}
 
 	.slide_2,.slide_3{
