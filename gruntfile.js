@@ -1,4 +1,3 @@
-module.exports = function(grunt) {
     // Project Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -31,35 +30,50 @@ module.exports = function(grunt) {
         }            
     },
         compass: {                  // Task
-      dist: {                   // Target
-        options: {              // Target options
-          sassDir: 'public/css/sass',
-          cssDir: 'public/css/views',
-          environment: 'production'
-      }
-  },
-      dev: {                    // Another target
-        options: {
-          sassDir: 'public/css/sass',
-          cssDir: 'public/css/views'
-      }
-  }
-},
-jshint: {
-    all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
-},
-nodemon: {
-    dev: {
-        options: {
-            file: 'server.js',
-            args: [],
-            ignoredFiles: ['README.md', 'node_modules/**', '.DS_Store'],
-            watchedExtensions: ['js'],
-            watchedFolders: ['app', 'config'],
-            debug: true,
-            delayTime: 1,
-            env: {
-                PORT: 3000
+          dist: {                   // Target
+            options: {              // Target options
+              sassDir: 'public/css/sass',
+              cssDir: 'public/css/views',
+              environment: 'production'
+            }
+          },
+          dev: {                    // Another target
+            options: {
+              sassDir: 'public/css/sass',
+              cssDir: 'public/css/views'
+            }
+          }
+        },
+        jshint: {
+            all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
+        },
+        nodemon: {
+            dev: {
+                options: {
+                    file: 'server.js',
+                    args: [],
+                    ignoredFiles: ['README.md', 'node_modules/**', '.DS_Store'],
+                    watchedExtensions: ['js'],
+                    watchedFolders: ['app', 'config'],
+                    debug: true,
+                    delayTime: 1,
+                    env: {
+                        PORT: 3000
+                    },
+                    cwd: __dirname
+                }
+            }
+        },
+        concurrent: {
+            tasks: ['nodemon', 'watch'], 
+            options: {
+                logConcurrentOutput: true
+            }
+        },
+        mochaTest: {
+            options: {
+                reporter: 'spec'
+>>>>>>> 807c0f2ee5f0ac8b8d251d32f7ea3315435e0397
             },
             cwd: __dirname
         }
@@ -95,6 +109,7 @@ env: {
 
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
+    grunt.registerTask('my', ['compass']);
 
     //Default task(s).
     grunt.registerTask('default', ['jshint', 'concurrent', 'compass']);

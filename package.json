@@ -47,6 +47,6 @@
     "grunt-nodemon": "latest",
     "grunt-concurrent": "latest",
     "grunt-mocha-test": "latest",
-    "grunt-contrib-compass": "~0.6.0"
+    "grunt-contrib-compass": "latest"
   }
 }

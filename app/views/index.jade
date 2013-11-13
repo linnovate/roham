@@ -1,7 +1,7 @@
 extends layouts/default
 
 block content
-  div.slider-container
-    section(data-ng-view).sliders
+  div.slider-container(ng-controller="GlobalController")
+    section(data-ng-view,class="{{$parent.transitionClass}}").sliders
   script(type="text/javascript").
     window.user = !{user};
