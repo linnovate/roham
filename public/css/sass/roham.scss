@@ -8,35 +8,24 @@
 
 
 body{
-  font-family: "Alef Hebrew",
-               “Helvetica Neue”,
-               Helvetica,
-               Arial,
-               sans-serif;                        
+	font-family: "Alef Hebrew",
+	“Helvetica Neue”,
+	Helvetica,
+	Arial,
+	sans-serif;                        
 }
 
-.sidebar{
-	float: left;
+.content {    
+	width:100%
+}
+
+.slide{
 	position: absolute;
-	right: 0;
 	height: 100%;
-	background: white;
-	z-index: 9999;
-	width: 10px;
-
-	@include transition-property('width');
-	@include transition-timing-function('ease-in');
-	@include transition-duration('200ms');	
-
-	&.visible{
-		width: 60px;
-	}
-
-
+	width: 100%;
 }
 
 .index .content_slide{
-
 	.logo_img {
 		margin-left: 62px;
 		margin-top: 30px;
@@ -85,40 +74,71 @@ body{
 		margin-top: 79px;
 	}
 }
-.content {    
-    width:100%
+
+.slide_1{
+
+	.logo_img {
+		margin-top: 2.688em;
+		margin-left: 2.500em;
+	}
+	.center-block{
+		text-align: right;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 68.438em;
+	}
+	.title_ask {
+		float: right;
+		margin-top: 1.375em;
+		width: 11.250em;
+		text-align: left;
+	}
+	.btn-group button{
+		width: 10.250em;
+		height: 4.000em;
+		margin-left: 0.813em;
+		
+		margin-right: 0.813em;
+		border-radius: 0.313em;
+		border-bottom-left-radius: 0.313em;
+	}
+	.kind , .status{
+		margin-top:0.438em;
+	}
+	.btn_link_slide_1 {
+		background: url(../../img/buttons/continue-btt.png);
+		display: block;
+		background-repeat: no-repeat;
+		width: 18.375em;
+		height: 5.000em;
+		text-indent: 9999px;
+		margin-left: 6.438em;
+		margin-top: 7.000em;	
+	}
 }
 
-.slide{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
 
-.btn_link_slide_1 {
- background: url(../../img/buttons/continue-btt.png);
- display: block;
- background-repeat: no-repeat;
- width: 294px;
- height: 80px;
- text-indent: 9999px;	
-}
+
 .btn_grey{
-	 background: url(../../img/buttons/grey-btt.png);
+	background: url(../../img/buttons/grey-btt.png);
+	box-shadow:2px 2px 10px #1f5360;
 }
-.change.btn_green{
-	background: url(../../img/buttons/green-btt.png);
-	
-}
-.change:hover{
+.btn_grey:hover{
 	background:#5f5f5f;
 }
-.change.active{
+.btn_grey.active {
 	background: url(../../img/buttons/green-btt.png);
+	border: solid 1px #1f4f5b; 
+	box-shadow:2px 2px 10px #488192;
+
 }
-.change:active {
-	background: url(../../img/buttons/green-btt.png);
-}
+
+
+
+
+
+/*Background to sliders*/
+/***********************/
 .index{
 
 	@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjIxIiBzdG9wLWNvbG9yPSIjZDBlMmY2Ii8+PHN0b3Agb2Zmc2V0PSIwLjgyIiBzdG9wLWNvbG9yPSIjYjRkMGVmIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNiNGQwZWYiIC8+PHJlY3QgeD0iMCUiIHk9Ii0xMy4wODQxJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTI2LjE2ODIlIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
@@ -127,83 +147,78 @@ body{
 		background-repeat: no-repeat;
 		background-position-x: 30px;
 		background-position-y: 62px;*/		
-}
-
-
-
-/*Background to sliders*/
-/***********************/
-
-.sliders{
-	.slide_1{
-		@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjM4MjQ5MyIgc3RvcC1jb2xvcj0iIzI5Njg3NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE1NDk1NyIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTU0OTU3IiAvPjxyZWN0IHg9Ii0zLjU5NTglIiB5PSItMTcuNjIwOSUiIHdpZHRoPSIxMDcuMTkxNiUiIGhlaWdodD0iMTM1LjI0MTclIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
-		radial-gradient(farthest-side circle at center center, #296875 41%, #154957 107.1916%));
-		color: white;			
 	}
 
-	.slide_2,.slide_3{
-		@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iIzQ2NDY0NiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJiMmIyYiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmIyYjJiIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=),
-		radial-gradient(farthest-side circle at center center, #464646 66%, #2b2b2b 154.1916%));
-	 	color: white;
+	.sliders{
+		.slide_1{
+			@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjM4MjQ5MyIgc3RvcC1jb2xvcj0iIzI5Njg3NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE1NDk1NyIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTU0OTU3IiAvPjxyZWN0IHg9Ii0zLjU5NTglIiB5PSItMTcuNjIwOSUiIHdpZHRoPSIxMDcuMTkxNiUiIGhlaWdodD0iMTM1LjI0MTclIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
+				radial-gradient(farthest-side circle at center center, #296875 41%, #154957 107.1916%));
+			color: white;			
+		}
+
+		.slide_2,.slide_3{
+			@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iIzQ2NDY0NiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJiMmIyYiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmIyYjJiIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=),
+				radial-gradient(farthest-side circle at center center, #464646 66%, #2b2b2b 154.1916%));
+			color: white;
+		}
+
+		.slide_4{
+			@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iI2VhZTllOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U0ZTJlMiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTRlMmUyIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=),
+				radial-gradient(farthest-side circle at center center, #eae9e9 66%, #e4e2e2 154.1916%));
+		}
+
+		&.ng-enter, &.ng-leave {
+			-webkit-transition:0.7s ease-in all;
+			-moz-transition:0.7s ease-in all;
+			-o-transition:0.7s ease-in all;
+			transition:0.7s ease-in all;
+
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			height:100%;
+		}
+		&.forward{
+			&.ng-enter {
+				z-index:100;
+				top:100%; 
+			}
+
+			&.ng-enter.ng-enter-active {
+				top:0;		  
+			}
+
+			&.ng-leave {
+				z-index:101;
+				top:0;  
+			}
+
+			&.ng-leave.ng-leave-active {
+				top:-100%;
+			}
+		}
+		&.back{
+			&.ng-enter {
+				z-index:101;
+				top:-100%; 
+			}
+
+			&.ng-enter.ng-enter-active {  
+				top:0;
+			}
+
+			&.ng-leave {
+				z-index:100;
+				top:0;
+			}
+
+			&.ng-leave.ng-leave-active {
+				top:100%;  
+			}		
+		}
+
 	}
-
-	.slide_4{
-		@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iI2VhZTllOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U0ZTJlMiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTRlMmUyIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=),
-		radial-gradient(farthest-side circle at center center, #eae9e9 66%, #e4e2e2 154.1916%));
-	}
-
-	&.ng-enter, &.ng-leave {
-	  -webkit-transition:0.7s ease-in all;
-	  -moz-transition:0.7s ease-in all;
-	  -o-transition:0.7s ease-in all;
-	  transition:0.7s ease-in all;
-
-	  position:absolute;
-	  top:0;
-	  left:0;
-	  right:0;
-	  height:100%;
-	}
-	&.forward{
-		&.ng-enter {
-		  z-index:100;
-		  top:100%; 
-		}
-
-		&.ng-enter.ng-enter-active {
-		  top:0;		  
-		}
-
-		&.ng-leave {
-		  z-index:101;
-		  top:0;  
-		}
-
-		&.ng-leave.ng-leave-active {
-		  top:-100%;
-		}
-	}
-	&.back{
-		&.ng-enter {
-		  z-index:101;
-		  top:-100%; 
-		}
-
-		&.ng-enter.ng-enter-active {  
-		  top:0;
-		}
-
-		&.ng-leave {
-		  z-index:100;
-		  top:0;
-		}
-
-		&.ng-leave.ng-leave-active {
-		  top:100%;  
-		}		
-	}
-	
-}
 
 
 
