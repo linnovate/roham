@@ -3,4 +3,6 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
 
     $scope.transitionClass = Global.transitionClass;
 
+    $scope.test = 4;
+
 }]);
