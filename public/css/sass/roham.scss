@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
 @import "compass";
 
+/*************@mixin*********/
+/***************************/
+
+
+
 
 body{
   font-family: "Alef Hebrew",
@@ -10,7 +15,7 @@ body{
                sans-serif;                        
 }
 
-.slide .content_slide{
+.index .content_slide{
 
 	.logo_img {
 		margin-left: 62px;
@@ -60,7 +65,6 @@ body{
 		margin-top: 79px;
 	}
 }
-
 .content {    
     width:100%
 }
@@ -71,6 +75,30 @@ body{
   width: 100%;
 }
 
+.btn_link_slide_1 {
+ background: url(../../img/buttons/continue-btt.png);
+ display: block;
+ background-repeat: no-repeat;
+ width: 294px;
+ height: 80px;
+ text-indent: 9999px;	
+}
+.btn_grey{
+	 background: url(../../img/buttons/grey-btt.png);
+}
+.change.btn_green{
+	background: url(../../img/buttons/green-btt.png);
+	
+}
+.change:hover{
+	background:#5f5f5f;
+}
+.change.active{
+	background: url(../../img/buttons/green-btt.png);
+}
+.change:active {
+	background: url(../../img/buttons/green-btt.png);
+}
 .index{
 
 	@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjIxIiBzdG9wLWNvbG9yPSIjZDBlMmY2Ii8+PHN0b3Agb2Zmc2V0PSIwLjgyIiBzdG9wLWNvbG9yPSIjYjRkMGVmIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNiNGQwZWYiIC8+PHJlY3QgeD0iMCUiIHk9Ii0xMy4wODQxJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTI2LjE2ODIlIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
