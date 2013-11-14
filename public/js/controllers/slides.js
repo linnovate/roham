@@ -4,4 +4,6 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
     $scope.transitionClass = Global.transitionClass;
     $scope.isActiveBtn = [ false, false ];
 
+    $scope.test = 4;
+
 }]);
