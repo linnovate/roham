@@ -1,7 +1,6 @@
 <section class="slide slide_4" ng-controller="SlidesController">
 	<h1>Slide 4</h1>
-	<survey-question>זאת השאלה שלי</survey-question>
+	{{questions[0].val}}
+	<survey-question title="{{questions[0].title}}" questionmodel="questions[0].val">{{questions[0].body}}</survey-question>
 
-	 <div id="myslider" ui-slider min="0" max="20" ng-model="test"></div>
-	<a href="/#!/slide_3">Previous</a>
 </section>
