@@ -40,19 +40,19 @@ angular.module('ui.slider', []).value('uiSliderConfig', {}).directive('uiSlider'
                         attrs.$observe(property, function(newVal) {
                             if ( !! newVal) {
                                 init();
-                                elm.slider('option', property, parseNumber(newVal, useDecimals));
+                                $(elm).slider('option', property, parseNumber(newVal, useDecimals));
                             }
                         });
                     });
                     attrs.$observe('disabled', function(newVal) {
                         init();
-                        elm.slider('option', 'disabled', !! newVal);
+                        $(elm).slider('option', 'disabled', !! newVal);
                     });
 
                     // Watch ui-slider (byVal) for changes and update
                     scope.$watch(attrs.uiSlider, function(newVal) {
                         init();
-                        elm.slider('option', newVal);
+                        $(elm).slider('option', newVal);
                     }, true);
 
                     // Late-bind to prevent compiler clobbering
@@ -98,7 +98,7 @@ angular.module('ui.slider', []).value('uiSliderConfig', {}).directive('uiSlider'
                             prevRangeValues.max = ngModel.$viewValue[1];
 
                         }
-                        elm.slider(method, ngModel.$viewValue);
+                        $(elm).slider(method, ngModel.$viewValue);
                     };
 
                     scope.$watch(attrs.ngModel, function() {
@@ -108,7 +108,7 @@ angular.module('ui.slider', []).value('uiSliderConfig', {}).directive('uiSlider'
                     }, true);
 
                     function destroy() {
-                        elm.slider('destroy');
+                        $(elm).slider('destroy');
                     }
                     elm.bind('$destroy', destroy);
                 };
