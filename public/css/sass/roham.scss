@@ -19,6 +19,28 @@ body{
 	width:100%
 }
 
+.sidebar{
+	float: left;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	background: white;
+	z-index: 9999;
+	width: 10px;
+
+	@include transition-property('width');
+	@include transition-timing-function('ease-in');
+	@include transition-duration('200ms');	
+
+	&.visible{
+		width: 60px;
+	}
+
+
+}
+
+
+
 .slide{
 	position: absolute;
 	height: 100%;
@@ -26,6 +48,10 @@ body{
 }
 
 .index .content_slide{
+	height: 100%;
+	overflow: hidden;
+
+
 	.logo_img {
 		margin-left: 62px;
 		margin-top: 30px;
@@ -42,12 +68,12 @@ body{
 		margin-top: -36px;
 	}
 	.body {
-		margin-top:72px;
+		margin-top:30px;
 		margin-bottom: 0px;
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
-		max-width: 32%;
+		max-width: 35%;
 	}
 	p {
 		font-size: 25px;
@@ -61,7 +87,7 @@ body{
 		background: url(../../img/buttons/begin-btt.png);
 		display: block;
 		text-indent: 9999px;
-		margin-top:63px;
+		margin-top:2%;
 		margin-bottom: 0px;
 		margin-left: auto;
 		margin-right: auto;
@@ -71,7 +97,7 @@ body{
 		max-width: 67.20%;
 		width: 100%;
 		display: block;
-		margin-top: 79px;
+		
 	}
 }
 
@@ -122,9 +148,13 @@ body{
 .btn_grey{
 	background: url(../../img/buttons/grey-btt.png);
 	box-shadow:2px 2px 10px #1f5360;
+	@include transition-property('background');
+	@include transition-timing-function('ease-in');
+	@include transition-duration('550ms');
+
 }
 .btn_grey:hover{
-	background:#5f5f5f;
+	background:#AFA5A5;
 }
 .btn_grey.active {
 	background: url(../../img/buttons/green-btt.png);
@@ -168,10 +198,10 @@ body{
 		}
 
 		&.ng-enter, &.ng-leave {
-			-webkit-transition:0.7s ease-in all;
-			-moz-transition:0.7s ease-in all;
-			-o-transition:0.7s ease-in all;
-			transition:0.7s ease-in all;
+			-webkit-transition:0.4s ease-in all;
+			-moz-transition:0.4s ease-in all;
+			-o-transition:0.4s ease-in all;
+			transition:0.4s ease-in all;
 
 			position:absolute;
 			top:0;
