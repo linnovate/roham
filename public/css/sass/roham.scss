@@ -383,4 +383,15 @@ survey-question{
 	}
 
 
-
+.scale{
+	margin-top: 20px;
+	width: 37%;
+	margin-left: -57px;
+	
+	.scale-digit{
+		width: 20%;
+		margin: 0 auto;
+		font-weight: 700;
+		float: left;
+	}
+}
