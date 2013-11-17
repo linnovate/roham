@@ -280,6 +280,47 @@ survey-question{
 		height: 8.250em;
 		box-shadow:3px 3px 15px #3b3237;
 		margin-right: 1.688em;
+
+	}
+
+	 .category_cec {
+	   	background-image: url(../../img/category/sec.png);
+	   	background-position: center;
+	   }
+	   .category_eco{
+	   	background-image: url(../../img/category/eco.1.png);
+	   	background-position: center;
+	   }
+	   .category_fami {
+	   	background-image: url(../../img/category/fami.1.png);
+	   	background-position: center;
+	   }
+	   .category_envi {
+	   	background-image: url(../../img/category/envi.1.png);
+	   	background-position: center;
+	   }
+	   .category_emplo {
+	   	background-image: url(../../img/category/emplo.png);
+	   	background-position: center;
+	   }
+	   .category_edu {
+	   	background-image: url(../../img/category/edu.png);
+	   	background-position: center;
+	   }
+	   .category_healt {
+	   	background-image: url(../../img/category/healt.png);
+	   	background-position: center;
+	   }
+	   .category_dior {
+	   	background-image: url(../../img/category/dior.png);
+	   	background-position: center;
+	   }
+	    .category_law {
+	   	background-image: url(../../img/category/law.png);
+	   	background-position: center;
+	   }
+	   	button[class~="category_"] {
+		background-position: center;
 	}
 	.btn_link_slide_2 {
 		background: url(../../img/buttons/continue-btt.png);

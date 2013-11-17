@@ -1,30 +1,40 @@
-<section class="slide slide_2">
+<section class="slide slide_2" data-ng-controller="IndexController">
 	<img src="../../img/background/israel-logo-grey3.png" class="logo_img">
 	<h1 > <small class="title">בחר/י את התחומים</small></h1>
 	<h1 > <small class="title">שחשוב לך להביע בהם דעה</small></h1>
 </br>
 <div class="body center-block" >
     <div class="category">
-        <button type="button" class="btn btn" ng-model="checkModel.left" btn-checkbox src="../../img/background/israel-logo-grey3.png"></button>
-        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox ></button>
-        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox ></button>
+        <button type="button" class="btn category_cec" ng-model="checkModel.left" btn-checkbox ></button>
+        <button type="button" class="btn category_eco" ng-model="checkModel.middle" btn-checkbox ></button>
+        <button type="button" class="btn category_fami" ng-model="checkModel.right" btn-checkbox ></button>
     </div>
 </br>
 </br>
 
         <div class="category">
-        <button type="button" class="btn " ng-model="checkModel.left" btn-checkbox ></button>
-        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
-        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
+        <button type="button" class="btn category_envi" ng-model="checkModel.left" btn-checkbox ></button>
+        <button type="button" class="btn category_emplo" ng-model="checkModel.middle" btn-checkbox ></button>
+        <button type="button" class="btn category_edu" ng-model="checkModel.right" btn-checkbox ></button>
     </div>
 </br>
 </br>
         <div class="category">
-        <button type="button" class="btn " ng-model="checkModel.left" btn-checkbox> </button>
-        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox></button>
-        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox></button>
+        <button type="button" class="btn category_healt" ng-model="checkModel.left" btn-checkbox> </button>
+        <button type="button" class="btn category_dior" ng-model="checkModel.middle" btn-checkbox></button>
+        <button type="button" class="btn category_law" ng-model="checkModel.right" btn-checkbox></button>
     </div>
+
+<!-- <div ng-repeat="url in urllArr" back-img="../../img/category/{{url}}" ng-class="back-img_+{{index}}" > </div> -->
+
 </div>
+
+<!-- <div ng-repeat="url in urllArr" >
+	<img ng-src="../../img/category/{{url}}" />
+</div> -->
+
+ 
+
 	<div class="next" ng-click="next()">Next</div>
 	<div class="previous" ng-click="previous()">Previous</div>
 
