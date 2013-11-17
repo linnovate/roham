@@ -1,2 +1,10 @@
-<div class="question">This is a question</div>
-<div ng-transclude></div>
+<div class="question-wrapper">
+	<div class="question-title">
+		{{title}}
+	</div>
+	<div class="question-body">
+		<div ng-transclude></div>
+	</div>
+	<div id="myslider" ui-slider min="1" max="5" step="1" ng-model="questionModel"></div>		
+</div>
+

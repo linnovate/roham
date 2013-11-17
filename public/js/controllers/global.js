@@ -1,25 +1,41 @@
-angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeParams', '$location', 'Global',
-	function($scope, $routeParams, $location, Global) {
-		$scope.global = Global;
+angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeParams', '$location', 'Global', 'Slides',
+	function($scope, $routeParams, $location, Global, Slides) {
+		$scope.global = Global;		
 		$scope.transitionClass = "index";
-		$scope.currentSlide = 0;
+		
+		$scope.showSidebar = Slides.currentSlide > 3 ? true : false;
 
-		$scope.$on('$locationChangeStart', function(event, newLoc, oldLoc) {
+		$scope.$on('$locationChangeSuccess', function(event, newLoc, oldLoc) {
+			$scope.transitionClass = $scope.getDirection(newLoc,oldLoc);
+			Slides.currentSlide = $scope.getCurrentSlide();
+			$scope.showSidebar = Slides.currentSlide > 3 ? true : false;
+		});
+
+
+		$scope.getCurrentSlide = function(){			
+			var loc = $location.path().split("_");
+			return loc.length > 1 ? loc[1] : 0
+		};
+
+
+		$scope.getDirection = function(newLoc,oldLoc){
+			var direction = "";
 			if (newLoc === oldLoc) return;
 			var newSlideString = newLoc.split("/")[4],
 				oldSlideString = oldLoc.split("/")[4];
 			if (newSlideString ==="") {
-				$scope.transitionClass = "back";
+				direction = "back";
 			}
 			if (oldSlideString === "") {
-				$scope.transitionClass = "forward";
+				direction = "forward";
 			} else {
 				var newSlide = parseInt(newSlideString.split("_")[1]),
 					oldSlide = parseInt(oldSlideString.split("_")[1]);
 				if (!isNaN(newSlide) && !isNaN(oldSlide)) {
-					$scope.transitionClass = (newSlide > oldSlide ? "forward" : "back");
+					direction = (newSlide > oldSlide ? "forward" : "back");
 				}
-			}
-		});
+			}	
+			return direction;
+		}
 	}
 ]);

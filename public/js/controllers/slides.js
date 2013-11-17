@@ -4,6 +4,12 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
     $scope.transitionClass = Global.transitionClass;
     $scope.isActiveBtn = [ false, false ];
 
-    $scope.test = 4;
+    $scope.questions = [
+    	{
+    		title: "שאלה כלכלית",
+    		body: "זאת השאלה שלי",
+    		val: 4
+    	}
+    ];
 
 }]);

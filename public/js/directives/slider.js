@@ -59,7 +59,8 @@ angular.module('ui.slider', []).value('uiSliderConfig', {}).directive('uiSlider'
                     $timeout(init, 0, true);
 
                     // Update model value from slider
-                    elm.bind('slide', function(event, ui) {
+                    $(elm).bind('slide', function(event, ui) {
+
                         ngModel.$setViewValue(ui.values || ui.value);
                         scope.$apply();
                     });
