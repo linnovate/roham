@@ -55,10 +55,11 @@ survey-question{
 	.sidebar_wrapper{
 		position: absolute;
 		right: 0px;
-		@include transition-property('all');
-		@include transition-duration('300ms');
-		@include transition-timing-function('ease-in');
-		
+		@include transition-property('width');
+		@include transition-duration('100ms');
+		@include transition-timing-function('linear');
+		width: 85px;
+		max-height: 85px;
 		-webkit-backface-visibility: hidden;
 
 		
@@ -96,6 +97,7 @@ survey-question{
 			font-size:0px;
 			min-width: 60%;
 			cursor: pointer;
+			overflow: hidden;
 
 			&:before{
 				z-index: -1;
@@ -120,11 +122,7 @@ survey-question{
 	}
 	
 
-	&.active{
-		&:nth-child(0){
-
-		}
-	}
+	&.active{}
 
 	&.open{		
 		.sidebar_wrapper{
