@@ -1,22 +1,25 @@
 <section class="slide slide_2">
+	<img src="../../img/background/israel-logo-grey3.png" class="logo_img">
 	<h1 > <small class="title">בחר/י את התחומים</small></h1>
 	<h1 > <small class="title">שחשוב לך להביע בהם דעה</small></h1>
 </br>
 <div class="body center-block" >
-    <div class="btn-group ">
-        <button type="button" class="btn " ng-model="checkModel.left" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
-        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
-        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
+    <div class="category">
+        <button type="button" class="btn btn" ng-model="checkModel.left" btn-checkbox src="../../img/background/israel-logo-grey3.png"></button>
+        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox ></button>
+        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox ></button>
     </div>
 </br>
-        <div class="btn-group">
-        <button type="button" class="btn " ng-model="checkModel.left" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
-        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
-        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
-    </div>
 </br>
 
-        <div class="btn-group">
+        <div class="category">
+        <button type="button" class="btn " ng-model="checkModel.left" btn-checkbox ></button>
+        <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
+        <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox ng-src="http://www.gravatar.com/avatar/{{hash}}"></button>
+    </div>
+</br>
+</br>
+        <div class="category">
         <button type="button" class="btn " ng-model="checkModel.left" btn-checkbox> </button>
         <button type="button" class="btn " ng-model="checkModel.middle" btn-checkbox></button>
         <button type="button" class="btn " ng-model="checkModel.right" btn-checkbox></button>
@@ -25,6 +28,6 @@
 	<div class="next" ng-click="next()">Next</div>
 	<div class="previous" ng-click="previous()">Previous</div>
 
-	<a href="/#!/slide_3">Next</a>
+	<a class="btn_link_slide_2" href="/#!/slide_3">Next</a>
 	<a href="/#!/slide_1">Previous</a>
 </section>
