@@ -8,7 +8,6 @@ window.app.config(['$routeProvider',
         when('/slide_2', {
             templateUrl: 'views/slides/slide_2.html',
         }).
-        
         when('/slide_3', {
             templateUrl: 'views/slides/slide_3.html',
         }).

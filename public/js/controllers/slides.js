@@ -1,35 +1,30 @@
-angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeParams', '$location', 'Global', function ($scope, $routeParams, $location, Global) {
-    $scope.global = Global;
+angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeParams', '$location', 'Global',
+    function($scope, $routeParams, $location, Global) {
+        $scope.global = Global;
 
-    $scope.transitionClass = Global.transitionClass;
-    $scope.isActiveBtn = [ false, false ];
+        $scope.transitionClass = Global.transitionClass;
+        $scope.isActiveBtn = [false, false];
 
-    $scope.questions = [
-    	{
-    		title: "שאלה כלכלית",
-    		body: "שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. ",
-    		val: 4
-    	},
-        {
+        $scope.questions = [{
             title: "שאלה כלכלית",
             body: "שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. ",
             val: 4
-        },
-        {
+        }, {
             title: "שאלה כלכלית",
             body: "שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. ",
             val: 4
-        },
-        {
+        }, {
             title: "שאלה כלכלית",
             body: "שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. ",
             val: 4
-        },
-        {
+        }, {
             title: "שאלה כלכלית",
             body: "שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. ",
             val: 4
-        }
-    ];
-
-}]);
+        }, {
+            title: "שאלה כלכלית",
+            body: "שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. שאלה שמתארת נושא מסויים שקשור לכלכה, עם פסיקים, נקודות. ",
+            val: 4
+        }];
+    }
+]);

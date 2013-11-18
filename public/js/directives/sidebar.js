@@ -1,5 +1,5 @@
 window.app.directive('sidebar', function() {
-    
+
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive
@@ -11,11 +11,11 @@ window.app.directive('sidebar', function() {
         templateUrl: 'views/sidebar/sidebar.html',
 
         link: function(scope, element, attrs) {
-        	console.log(scope)
+            
         }
     };
 }).directive('sidebarCell', function() {
-    
+
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive
@@ -31,12 +31,11 @@ window.app.directive('sidebar', function() {
 
         link: function(scope, element, attrs) {
             scope.open = false;
-            $(element).hover(function(){
+            $(element).hover(function() {
                 $(element).addClass("open");
-            },function(){
+            }, function() {
                 $(element).removeClass("open");
             });
         }
     };
 });
-
