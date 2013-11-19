@@ -51,8 +51,6 @@ body{
 	right: 0px;
 	position: relative;
 
-		
-	
 	.sidebar_wrapper{
 		position: absolute;
 		right: 0px;
@@ -79,7 +77,8 @@ body{
 		.sidebar_icon_wrapper{		
 			text-align: center;
 			position: absolute;
-			right: 1.2em;		
+			right: 1.2em;
+			display: none;		
 			
 			line-height: 6em;
 			img{
@@ -130,8 +129,12 @@ body{
 	&.open{		
 		.sidebar_wrapper{
 			width: 320%;
-
 			right: 0px;
+
+			.sidebar_icon_wrapper{
+				display: block; 
+			}
+			
 			.sidebar_label{
 				// width: 60%;
 				display: inline;
@@ -309,7 +312,7 @@ survey-question{
 		width: 30%;
 	}
 
-	// $slider-handle: url("../../img/assets/slider-handle.png");
+	$slider-handle: url("../../img/assets/slider-handle.png");
 
 	.slider {
 	  position: relative;
@@ -318,8 +321,8 @@ survey-question{
 	  background-color: #d54334;
 	  margin-top: 10px;
 	  margin-left: 10px;
-	  @include transitionProperty(background-color);
-	  @include transitionDuration(400ms);	
+	  @include transition-property(background-color);
+	  @include transition-duration(400ms);	
 
 		@for $i from 0 through 50 {
 			&.value-#{$i}{
@@ -362,8 +365,8 @@ survey-question{
 	  div.ui-slider-range {
 	    display: block;
 	    height: 6px;
-	    @include transitionProperty(background-color);
-	    @include transitionDuration(100ms);
+	    @include transition-property(background-color);
+	    @include transition-duration(100ms);
 	  }
 	  
 	  
