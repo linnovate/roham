@@ -11,7 +11,7 @@ window.app.directive('sidebar', function() {
         templateUrl: 'views/sidebar/sidebar.html',
 
         link: function(scope, element, attrs) {
-        	console.log(scope)
+        	console.log(scope);
         }
     };
 }).directive('sidebarCell', function() {

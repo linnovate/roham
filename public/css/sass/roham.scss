@@ -4,7 +4,17 @@
 /*************@mixin*********/
 /***************************/
 
+@mixin direction {
+	background: url(../../img/buttons/continue-btt.png);
+	display: block;
+	background-repeat: no-repeat;
+	width: 21.438em;
+	height: 6.000em;
+	text-indent: 9999px;
+	margin-left: 6.438em;
+	margin-top: 7.000em;
 
+}
 
 
 body{
@@ -233,8 +243,7 @@ survey-question{
 	.btn-group button{
 		width: 10.250em;
 		height: 4.000em;
-		margin-left: 0.813em;
-		
+		margin-left: 0.813em;	
 		margin-right: 0.813em;
 		border-radius: 0.313em;
 		border-bottom-left-radius: 0.313em !important;
@@ -247,14 +256,11 @@ survey-question{
 		margin-top:0.438em;
 	}
 	.btn_link_slide_1 {
-		background: url(../../img/buttons/continue-btt.png);
-		display: block;
-		background-repeat: no-repeat;
-		width: 21.438em;
-		height: 6.000em;
-		text-indent: 9999px;
-		margin-left: 6.438em;
-		margin-top: 7.000em;	
+		@include direction;	
+	}
+	.ng-binding {
+		background: red;
+		color: black;
 	}
 }
 
@@ -285,52 +291,37 @@ survey-question{
 
 	 .category_cec {
 	   	background-image: url(../../img/category/sec.png);
-	   	background-position: center;
 	   }
 	   .category_eco{
 	   	background-image: url(../../img/category/eco.1.png);
-	   	background-position: center;
 	   }
 	   .category_fami {
 	   	background-image: url(../../img/category/fami.1.png);
-	   	background-position: center;
 	   }
 	   .category_envi {
 	   	background-image: url(../../img/category/envi.1.png);
-	   	background-position: center;
 	   }
 	   .category_emplo {
 	   	background-image: url(../../img/category/emplo.png);
-	   	background-position: center;
 	   }
 	   .category_edu {
 	   	background-image: url(../../img/category/edu.png);
-	   	background-position: center;
 	   }
 	   .category_healt {
 	   	background-image: url(../../img/category/healt.png);
-	   	background-position: center;
 	   }
 	   .category_dior {
 	   	background-image: url(../../img/category/dior.png);
-	   	background-position: center;
 	   }
 	    .category_law {
 	   	background-image: url(../../img/category/law.png);
-	   	background-position: center;
+
 	   }
-	   	button[class~="category_"] {
+	   	button[class*="category_"] {
 		background-position: center;
 	}
 	.btn_link_slide_2 {
-		background: url(../../img/buttons/continue-btt.png);
-		display: block;
-		background-repeat: no-repeat;
-		width: 21.438em;
-		height: 6.000em;
-		text-indent: 9999px;
-		margin-left: 6.438em;
-		margin-top: 7.000em;	
+		@include direction;	
 	}
 
 }
@@ -478,3 +469,4 @@ survey-question{
 		float: left;
 	}
 }
+
