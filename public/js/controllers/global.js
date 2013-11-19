@@ -14,7 +14,7 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
 
 		$scope.getCurrentSlide = function(){			
 			var loc = $location.path().split("_");
-			return loc.length > 1 ? loc[1] : 0
+			return loc.length > 1 ? loc[1] : 0;
 		};
 
 
