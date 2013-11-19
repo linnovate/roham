@@ -1,4 +1,4 @@
-window.app.directive('sidebar', function() {
+window.app.directive('sidebar', ['Slides', function(Slides) {
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive
@@ -11,9 +11,11 @@ window.app.directive('sidebar', function() {
 
         link: function(scope, element, attrs) {
             
+            scope.slides = Slides;
+            console.log(scope.slides);
         }
     };
-}).directive('sidebarCell', function() {
+}]).directive('sidebarCell', function() {
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive
