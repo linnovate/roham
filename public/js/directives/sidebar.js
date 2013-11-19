@@ -1,5 +1,4 @@
 window.app.directive('sidebar', function() {
-
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive
@@ -15,7 +14,6 @@ window.app.directive('sidebar', function() {
         }
     };
 }).directive('sidebarCell', function() {
-
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive

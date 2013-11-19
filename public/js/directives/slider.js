@@ -1,7 +1,8 @@
 /*
  jQuery UI Slider plugin wrapper
 */
-angular.module('ui.slider', []).value('uiSliderConfig', {}).directive('uiSlider', ['uiSliderConfig', '$timeout',
+angular.module('ui.slider', []).value('uiSliderConfig', {})
+.directive('uiSlider', ['uiSliderConfig', '$timeout',
     function(uiSliderConfig, $timeout) {
         uiSliderConfig = uiSliderConfig || {};
         return {
