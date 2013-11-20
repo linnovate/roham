@@ -93,7 +93,10 @@ angular.module('mean.slides').factory("Slides", [ "$location",
                 var q = n[index];
                 n.splice(index,1);
                 n.unshift(q);
+                // _this._obj.categoryArr = n;
                 angular.copy(n,_this._obj.categoryArr);
+                console.log("nlength", _this._obj.categoryArr.length);
+
             }
 
             return _this._obj;

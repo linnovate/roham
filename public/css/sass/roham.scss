@@ -44,6 +44,10 @@ body{
 	@include transition-duration('200ms');	
 
 	> .sidebar_content > .sidebar_cell {
+		&:nth-child(n+11){
+			display: none;
+		}
+
 		min-height: 79px;
 		// width: 385px;
 		height: 10%;		
