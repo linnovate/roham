@@ -2,7 +2,7 @@ extends layouts/default
 
 block content
   div.slider-container(ng-controller="GlobalController")
-    section(class="sidebar",ng-class="{true: 'visible', false: ''}[showSidebar]",sidebar)
+    section(class="sidebar",ng-class="{true: 'visible', false: 'hidden'}[showSidebar]",sidebar)
     section(data-ng-view,class="{{$parent.transitionClass}} slides")
   script(type="text/javascript").
     window.user = !{user};

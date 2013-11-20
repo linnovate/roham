@@ -1,18 +1,10 @@
 //Setting up route
 window.app.config(['$routeProvider',
-    function($routeProvider) {
+    function($routeProvider,$routeParams) {
         $routeProvider.
-        when('/slide_1', {
-            templateUrl: 'views/slides/slide_1.html',
-        }).
-        when('/slide_2', {
-            templateUrl: 'views/slides/slide_2.html',
-        }).
-        when('/slide_3', {
-            templateUrl: 'views/slides/slide_3.html',
-        }).
-        when('/slide_4', {
-            templateUrl: 'views/slides/slide_4.html',
+        when('/slide/:slide_id', {
+            // templateUrl: 'views/slides/slide_1.html',
+            templateUrl: function(params){ return 'views/slides/slide_' + params.slide_id + '.html'; }
         }).
         otherwise({
             redirectTo: '/',
