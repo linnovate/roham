@@ -298,8 +298,11 @@ body{
 		box-shadow:3px 3px 15px #3b3237;
 		margin-right: 1.688em;
 		float: right;
-
+		margin-top: 2.375em
 	}
+			button:nth-child(-n+3) {
+			margin-top: 0px;
+		}
 
 	   .category_sec {
 	   	background-image: url(../../img/category/sec.png);
