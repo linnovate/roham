@@ -40,7 +40,7 @@ window.app.directive('sidebar', ['Slides',
 
             scope.gotoSlide = function(slide){
                 $location.path("slide/" + slide);
-            }
+            };            
         }
     };
 }]);

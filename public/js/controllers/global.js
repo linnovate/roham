@@ -18,40 +18,13 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
 
 
 		$scope.getDirection = function(newLoc,oldLoc) {
-			var direction = "";
 			if (newLoc === oldLoc) return;
-			var newSlideString = newLoc.split("/")[4],
-				oldSlideString = oldLoc.split("/")[4];
-			if (newSlideString ==="") {
-				direction = "back";
-			}
-			if (oldSlideString === "") {
-				direction = "forward";
-			} else {
-				var newSlide = parseInt(newSlideString.split("_")[1]),
-					oldSlide = parseInt(oldSlideString.split("_")[1]);
-				if (!isNaN(newSlide) && !isNaN(oldSlide)) {
-					direction = (newSlide > oldSlide ? "forward" : "back");
-				}
-			}	
-			// return direction;
-			return "forward";
+			var newLocation = newLoc.split("/")[5],
+				oldLocation = oldLoc.split("/")[5];
+			if (typeof(oldLocation) == "undefined"){ return "forward" }	
+			return newLocation > oldLocation ? "forward" : "back";
 
-	};
-
-
-
-		
-	$scope.moveToTop = function (category,index) {
-		console.log(category,index);
-       if (index != -1) {
-			var obj = $scope.categoryArr[index];
-			$scope.categoryArr.splice(index, 1);
-			$scope.categoryArr.splice(0,0,obj);
-            console.log($scope.categoryArr);
-        }
-	};
-
+		};
 }
 
 ]);

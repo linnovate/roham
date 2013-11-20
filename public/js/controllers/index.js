@@ -4,7 +4,7 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         $scope.slides = Slides;
 
         $scope.moveToTop = function(index){
-            Slides.moveToTop(index);
+            Slides = Slides.moveToTop(index);
         };
 
     }

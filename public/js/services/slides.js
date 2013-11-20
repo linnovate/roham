@@ -82,14 +82,21 @@ angular.module('mean.slides').factory("Slides", [ "$location",
 
         function moveToTop(index) {
             console.log(index);
-            var newSlide = index + 3;
+
+            var newSlide = _this._obj.categoryArr[index].slide;
             $location.path("/slide/" + newSlide);
             
             if (index != -1) {
                 var obj = _this._obj.categoryArr[index];
-                _this._obj.categoryArr.splice(index, 1);
-                _this._obj.categoryArr.splice(0,0,obj);
+                //Make a copy of the categoryArr with slice(0)
+                var n = _this._obj.categoryArr.slice(0);
+                var q = n[index];
+                n.splice(index,1);
+                n.unshift(q);
+                angular.copy(n,_this._obj.categoryArr);
             }
+
+            return _this._obj;
         }
 
         return _this._obj;
