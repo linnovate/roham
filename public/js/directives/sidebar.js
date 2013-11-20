@@ -23,7 +23,7 @@ window.app.directive('sidebar', ['Slides',
             label: "@label",
             iconPath: "@icon",
             color: "@color", 
-            slideNumber: "@slideNumber"
+            slideNumber: "@slidenumber"
             // questionModel: "=questionmodel"
         },
         transclude: false,
