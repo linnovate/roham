@@ -16,6 +16,7 @@
 
 }
 
+/***************************/
 
 body{
 	font-family: "Alef Hebrew";
@@ -44,11 +45,7 @@ body{
 	@include transition-duration('200ms');	
 
 	> .sidebar_content > .sidebar_cell {
-		&:nth-child(n+11){
-			display: none;
-		}
-
-		
+		min-height: 79px;
 		// width: 385px;
 		height: 10%;		
 		right: 0px;
@@ -245,8 +242,10 @@ body{
 	}
 	.title{
 		font-size: 55px;
-		font-family: alef;
+
 		color: white;
+			font-family: "Alef Hebrew";
+	 
 	}
 	.center-block{
 		text-align: right;
@@ -307,9 +306,16 @@ body{
 		box-shadow:3px 3px 15px #3b3237;
 		margin-right: 1.688em;
 		float: right;
+/*<<<<<<< HEAD
+		margin-top: 2.375em
+=======*/
 		margin-bottom: 20px;
 
+
 	}
+			button:nth-child(-n+3) {
+			margin-top: 0px;
+		}
 
 	   .category_sec {
 	   	background-image: url(../../img/category/sec.png);
@@ -579,3 +585,52 @@ survey-question{
 	}
 }
 
+
+
+
+.slider {
+    position: relative;
+    width: 170px;
+    display: block;
+    background-image: url("http://delfinamassun.files.wordpress.com/2011/09/light-grey-square.jpg");
+    margin-top: 10px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    
+    @for $i from 0 through 100 {
+        &.value-#{$i}{
+            background-position: #{$i/10}em;
+            border: 0px solid rgba(0,0,0,0);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset #{$i/10}em 0 0 green;
+        }
+    }
+    
+    height: 8px;
+    box-shadow: 0 1px 0px rgba(255,255,255,0),
+        inset 0 0 4px rgba(0,0,0,0);
+    
+    div.ui-slider-range {
+        display: block;
+        height: 6px;
+        background-color: blue;
+    }
+    
+    a.ui-slider-handle {
+        position: absolute;
+        top: -5px;
+        margin-left: -9px;
+        z-index: 2;
+        height: 16px;
+        width: 16px;
+        background-color: #d4d4d4;
+        @include background-size(100% 100%);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+        
+        outline: none;
+    }
+    
+    a.ui-slider-handle:after {
+            
+        }
+
+		}		
