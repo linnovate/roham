@@ -6,11 +6,10 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.isActiveBtn = [false, false];
         $scope.currentSlide = $routeParams.slide_id;
         $scope.slides = Slides;
-
         
-
+        console.log($scope.currentSlide);
         //TODO: Change this
-        $scope.questions = Slides.categoryArr[$scope.currentSlide-3].questions;
+        $scope.questions = Slides.questions["slide_" + $scope.currentSlide];
 
        
     }

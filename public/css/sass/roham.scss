@@ -127,6 +127,10 @@ body{
 
 		> .sidebar_content > .sidebar_cell{
 
+			&:nth-child(n+11){
+				display: none;
+			}
+
 			&:hover{		
 				.sidebar_wrapper{
 					width: 320%;
@@ -306,9 +310,9 @@ body{
 		box-shadow:3px 3px 15px #3b3237;
 		margin-right: 1.688em;
 		float: right;
-/*<<<<<<< HEAD
-		margin-top: 2.375em
-=======*/
+
+		margin-top: 2.375em;
+
 		margin-bottom: 20px;
 
 
