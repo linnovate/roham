@@ -26,6 +26,13 @@ angular.module('ui.slider', []).value('uiSliderConfig', {})
                             options.range = true;
                         }
                         $(elm).slider(options);
+                        // console.log();
+                        var tooltipHtml = "<div class='slider_tooltip' value='0'>מאוד לא שבע רצון</div>"
+                        var handle = $(elm).children(".ui-slider-handle");
+                        if (handle.children().length ==0 ){
+                            handle.append(tooltipHtml)    
+                        }
+                        
                         init = angular.noop;
                     };
 
@@ -58,7 +65,25 @@ angular.module('ui.slider', []).value('uiSliderConfig', {})
 
                     // Update model value from slider
                     $(elm).bind('slide', function(event, ui) {
-
+                        var tooltip= $(elm).children(".ui-slider-handle").children(".slider_tooltip");
+                        switch(ui.value){
+                            case 0:
+                                tooltip.html("מאוד לא שבע רצון");                                
+                            break;
+                            case 25:
+                                tooltip.html("לא שבע רצון");
+                            break;
+                            case 50:
+                                tooltip.html("אדיש");
+                            break;
+                            case 75:
+                                tooltip.html("שבע רצון");
+                            break;
+                            case 100:
+                                tooltip.html("מאוד שבע רצון");
+                            break;
+                        }
+                        tooltip.attr('value',ui.value);
                         ngModel.$setViewValue(ui.values || ui.value);
                         scope.$apply();
                     });

@@ -446,14 +446,56 @@ survey-question{
 	        width: 16px;
 	        background-color: #d4d4d4;
 	        @include background-size(100% 100%);
-	        box-shadow: 0 1px 0 rgba(255, 255, 255, 0);
-	        
+	        box-shadow: 0 1px 0 rgba(255, 255, 255, 0);	        
 	        outline: none;
+	        .slider_tooltip{
+
+				background: white;
+				border: 1px solid rgba(0, 0, 0, 0.31);
+				position: absolute;
+				top: -35px;
+				opacity: 0;
+				margin-bottom: 20px;
+				padding: 4px;
+				border-radius: 4px;
+				left: -9px;
+
+				@include transition-property('opacity');
+				@include transition-duration('100ms');
+
+				&[value="0"]{
+					width: 105px;
+					left: -50px;
+				}
+				&[value="25"]{
+					width: 74px;
+					left: -35px;
+				}
+				&[value="50"]{
+					width: 30px;
+				}
+				&[value="75"]{
+					width: 55px;
+					left: -23px;
+				}
+				&[value="100"]{
+					width: 88px;
+					left: -40px;
+				}
+			}				
+	    }
+
+	    &:hover{
+	    	a.ui-slider-handle {
+	    		.slider_tooltip{
+	    			opacity: 100;
+	    		}
+	    	}
 	    }
 	    
 	    a.ui-slider-handle:after {
 	            
-	        }
+	    }
 	}
 }
 
@@ -554,9 +596,7 @@ survey-question{
 	}
 }
 
-.tooltip{
-	
-}
+
 
 
 		
