@@ -1,5 +1,5 @@
 <section class="slide slide_3" ng-controller="SlidesController">
 	<h4>הזז את הסמן לפי שביעות רצונך, 1 - איני שבע רצון כלל, 5 - אני מאוד שבע רצון</h4>	
-	<survey-question ng-repeat="question in questions" title="{{question.title}}" questionmodel="question.val">{{question.body}} <div class="slider value-{{sliderValue}}" ui-slider min="0" max="100" ng-model="sliderValue"></div></survey-question>
+	<survey-question ng-repeat="question in questions" title="{{question.title}}" questionmodel="question.val">{{question.body}} </survey-question>
 
 </section>

@@ -5,13 +5,15 @@
 	<div class="question-body">
 		<div ng-transclude></div>
 	</div>
-	<div id="myslider" ui-slider min="1" max="5" step="1" ng-model="questionModel"></div>
+	<!-- <div id="myslider" ui-slider min="1" max="5" step="1" ng-model="questionModel"></div> -->
+	<div class="slider value-{{sliderValue}}" ui-slider step="25" min="0" max="100" ng-model="sliderValue"></div>
 	<div class="scale">
 		<span class="scale-digit">1</span>
 		<span class="scale-digit">2</span>
 		<span class="scale-digit">3</span>
 		<span class="scale-digit">4</span>
 		<span class="scale-digit">5</span>
-	</div>		
+	</div>
+	<div class="tooltip"></div>		
 </div>
 
