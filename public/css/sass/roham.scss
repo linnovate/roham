@@ -16,6 +16,7 @@
 
 }
 
+/***************************/
 
 body{
 	font-family: "Alef Hebrew";
@@ -241,8 +242,10 @@ body{
 	}
 	.title{
 		font-size: 55px;
-		font-family: alef;
+
 		color: white;
+			font-family: "Alef Hebrew";
+	 
 	}
 	.center-block{
 		text-align: right;
@@ -582,3 +585,52 @@ survey-question{
 	}
 }
 
+
+
+
+.slider {
+    position: relative;
+    width: 170px;
+    display: block;
+    background-image: url("http://delfinamassun.files.wordpress.com/2011/09/light-grey-square.jpg");
+    margin-top: 10px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    
+    @for $i from 0 through 100 {
+        &.value-#{$i}{
+            background-position: #{$i/10}em;
+            border: 0px solid rgba(0,0,0,0);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset #{$i/10}em 0 0 green;
+        }
+    }
+    
+    height: 8px;
+    box-shadow: 0 1px 0px rgba(255,255,255,0),
+        inset 0 0 4px rgba(0,0,0,0);
+    
+    div.ui-slider-range {
+        display: block;
+        height: 6px;
+        background-color: blue;
+    }
+    
+    a.ui-slider-handle {
+        position: absolute;
+        top: -5px;
+        margin-left: -9px;
+        z-index: 2;
+        height: 16px;
+        width: 16px;
+        background-color: #d4d4d4;
+        @include background-size(100% 100%);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+        
+        outline: none;
+    }
+    
+    a.ui-slider-handle:after {
+            
+        }
+
+		}		
