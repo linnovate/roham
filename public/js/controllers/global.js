@@ -8,6 +8,9 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
 		$scope.$on('$locationChangeSuccess', function(event, newLoc, oldLoc) {
 			$scope.transitionClass = $scope.getDirection(newLoc,oldLoc);
 			$scope.showSidebar = $location.path().split("/")[2] > 2 ? true : false;
+			
+			var newLocation = newLoc.split("/")[5];
+			// Slides.updateCurrentSlide(newLocation);
 		});
 
 

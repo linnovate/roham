@@ -4,6 +4,7 @@ angular.module('mean.slides').factory("Slides", ["$location",
 
         _this._obj = {
             currentSlide: 0,
+            currentIndex: 0,
             questions: {
                 "slide_3": [{
                     title: "שאלה משפחה",
@@ -222,11 +223,11 @@ angular.module('mean.slides').factory("Slides", ["$location",
                 color: 'blue'
             }],
 
-            moveToTop: moveToTop
+            moveToTop: moveToTop,
+            updateCurrentSlide: updateCurrentSlide
         };
 
         function moveToTop(index) {
-            console.log(index);
 
             var newSlide = _this._obj.categoryArr[index].slide;
             $location.path("/slide/" + newSlide);
@@ -240,11 +241,16 @@ angular.module('mean.slides').factory("Slides", ["$location",
                 n.unshift(q);
                 // _this._obj.categoryArr = n;
                 angular.copy(n, _this._obj.categoryArr);
-                console.log("nlength", _this._obj.categoryArr.length);
+                updateCurrentSlide(newSlide,0);
 
             }
 
             return _this._obj;
+        }
+
+        function updateCurrentSlide(slide_id,index){
+            _this._obj.currentSlide = slide_id;
+            _this._obj.currentIndex = index;
         }
 
         return _this._obj;

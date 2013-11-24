@@ -15,7 +15,7 @@ window.app.directive('sidebar', ['Slides',
             }
         };
     }
-]).directive('sidebarCell', ['$location', function($location) {
+]).directive('sidebarCell', ['$location', 'Slides', '$routeParams', function($location, Slides, $routeParams) {
     return {
         restrict: 'A', // the directive can be invoked only by using <my-directive> tag in the template
         scope: { // attributes bound to the scope of the directive
@@ -23,7 +23,8 @@ window.app.directive('sidebar', ['Slides',
             label: "@label",
             iconPath: "@icon",
             color: "@color", 
-            slideNumber: "@slidenumber"
+            slideNumber: "@slidenumber",
+            index: "@index"
             // questionModel: "=questionmodel"
         },
         transclude: false,
@@ -32,15 +33,43 @@ window.app.directive('sidebar', ['Slides',
 
         link: function(scope, element, attrs) {
             scope.open = false;
+            // if ($routeParams.slide_id == scope.slideNumber){
+            //     $(element).addClass("active");
+            // }
+            // else{
+            //     $(element).removeClass("active");   
+            // }
+            
             $(element).hover(function() {
                 $(element).addClass("open");
             }, function() {
                 $(element).removeClass("open");
             });
 
-            scope.gotoSlide = function(slide){
+            scope.isActive = function(){
+                if (Slides.currentSlide == attrs.slidenumber){
+                    return true;
+                }
+                return false;
+            };
+
+            scope.gotoSlide = function(slide,index){                
                 $location.path("slide/" + slide);
-            };            
+                $(".sidebar_cell").removeClass("active");                
+                console.log(index);         
+                Slides.updateCurrentSlide(slide,index);
+            };  
+
+            // scope.$on('$locationChangeSuccess', function(event, newLoc, oldLoc) {
+            //     var newLocation = newLoc.split("/")[5];
+            //     Slides.updateCurrentSlide(newLocation)
+            //     // if ($routeParams.slide_id == newLocation){
+            //     //     $(element).addClass("active");
+            //     // }
+            //     // else{
+            //     //     $(element).removeClass("active");   
+            //     // }
+            // });          
         }
     };
 }]);
