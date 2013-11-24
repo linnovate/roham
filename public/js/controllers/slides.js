@@ -11,6 +11,10 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         //TODO: Change this
         $scope.questions = Slides.questions["slide_" + $scope.currentSlide];
 
+        $scope.gotoNext = function(){
+            var next = "slide/" + (parseInt($scope.currentSlide) + 1);
+            $location.path("/" + next);
+        };
        
     }
 ]);

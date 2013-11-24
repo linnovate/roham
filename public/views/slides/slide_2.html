@@ -1,15 +1,26 @@
 <section class="slide slide_2" data-ng-controller="IndexController">
-    <img src="../../img/background/israel-logo-grey3.png" class="logo_img">
-    <h1>
-        <small class="title">בחר/י את התחומים</small>
-    </h1>
-    <h1>
-        <small class="title">שחשוב לך להביע בהם דעה</small>
-    </h1>
-    </br>
-    <div class="body center-block">
-        <div class="category">
-            <button ng-repeat="button in slides.categoryArr" type="button" class="btn category_{{button.name}}" ng-click="moveToTop($index)"></button>    
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <img src="../../img/background/israel-logo-grey3.png" class="logo_img">
+            </div>
+            <div class="span6">
+                <div class="titleWrapper">
+                    <h1 class="smallTitle">בחר/י את התחומים</h1>
+                    <h1 class="smallTitle">שחשוב לך להביע בהם דעה</h1>                                
+                </div>                
+                <div class="body center-block">
+                    <div class="category">
+                        <button ng-repeat="button in slides.categoryArr" type="button" class="btn category_{{button.name}}" ng-click="moveToTop($index)"></button>    
+                    </div>
+                </div>
+            </div>
+            <div class="span3"></div>
         </div>
-    </div>    
+    </div>
+
+
+
+    
+        
 </section>

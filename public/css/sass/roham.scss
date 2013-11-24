@@ -12,7 +12,7 @@
 	height: 6.000em;
 	text-indent: 9999px;
 	margin-left: 6.438em;
-	margin-top: 7.000em;
+	margin-top: 3.000em;
 
 }
 
@@ -45,7 +45,7 @@ body{
 	@include transition-duration('200ms');	
 
 	> .sidebar_content > .sidebar_cell {
-		min-height: 79px;
+		// min-height: 79px;
 		// width: 385px;
 		height: 10%;		
 		right: 0px;
@@ -75,10 +75,10 @@ body{
 
 			.sidebar_icon_wrapper{		
 				float: right;
-				padding: 17px;
 				position: relative;
-				img{
-					
+				.sidebar_icon{
+					max-width: 85%;	
+					margin-left: 7%;				
 				}
 			}
 
@@ -88,7 +88,7 @@ body{
 				font-size: 47px;
 				line-height: 1.2em;
 				vertical-align: middle;
-				padding: 8px;
+				padding-top: 8px;
 				text-align: center;
 				width: 0px;
 				display: none;
@@ -133,7 +133,7 @@ body{
 
 			&:hover{		
 				.sidebar_wrapper{
-					width: 320%;
+					width: 350%;
 					right: 0px;
 
 					.sidebar_icon_wrapper{
@@ -172,13 +172,33 @@ body{
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
+
 
 	h4{
 		text-align: center;
 		margin-bottom: 60px;
 		margin-top: 30px;
 	}
+
+	.smallTitle {
+		font-size: 3em;
+		font-weight: 300;
+	}
+
+	.bigTitle {
+		font-size: 5em;
+		font-weight: bold;
+		margin-top: 0.5em;
+	}
+
+	a.btn_link {
+		@include direction;	
+	}
+
 }
+
+
 
 .index .content_slide{
 	height: 100%;
@@ -192,21 +212,13 @@ body{
 	h1,h1 small{
 		color: #010000;
 	}
-	.title {
-		font-size: 55px;
-	}
-	.bigTitle {
-		font-size: 65px;
-		font-weight: bold;
-		margin-top: -36px;
-	}
+
 	.body {
 		margin-top:30px;
 		margin-bottom: 0px;
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
-		max-width: 35%;
 	}
 	p {
 		font-size: 25px;
@@ -220,7 +232,7 @@ body{
 		background: url(../../img/buttons/begin-btt.png);
 		display: block;
 		text-indent: 9999px;
-		margin-top:2%;
+		margin-top:5%;
 		margin-bottom: 0px;
 		margin-left: auto;
 		margin-right: auto;
@@ -280,6 +292,7 @@ body{
 	}
 	.btn_link_slide_1 {
 		@include direction;	
+		margin-top: 3em;
 	}
 	.ng-binding {
 		background: red;
@@ -355,6 +368,7 @@ body{
 
 	   	button[class*="category_"] {
 		background-position: center;
+		border: none;
 	}
 	.btn_link_slide_2 {
 		@include direction;	
@@ -392,7 +406,7 @@ survey-question{
 	margin-bottom: 10px;
 	border-bottom: 1px solid #c6c6c6;
 	line-height: 1.3;
-	padding-bottom: 40px;
+	padding-bottom: 2%;
 	height: 85px;
 
 
