@@ -21,7 +21,7 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
 			if (newLoc === oldLoc) return;
 			var newLocation = newLoc.split("/")[5],
 				oldLocation = oldLoc.split("/")[5];
-			if (typeof(oldLocation) == "undefined"){ return "forward" }	
+			if (typeof(oldLocation) == "undefined"){ return "forward"; }	
 			return newLocation > oldLocation ? "forward" : "back";
 
 		};

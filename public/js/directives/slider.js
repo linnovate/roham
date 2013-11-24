@@ -27,10 +27,10 @@ angular.module('ui.slider', []).value('uiSliderConfig', {})
                         }
                         $(elm).slider(options);
                         // console.log();
-                        var tooltipHtml = "<div class='slider_tooltip' value='0'>מאוד לא שבע רצון</div>"
+                        var tooltipHtml = "<div class='slider_tooltip' value='0'>מאוד לא שבע רצון</div>";
                         var handle = $(elm).children(".ui-slider-handle");
-                        if (handle.children().length ==0 ){
-                            handle.append(tooltipHtml)    
+                        if (handle.children().length === 0 ){
+                            handle.append(tooltipHtml);    
                         }
                         
                         init = angular.noop;
