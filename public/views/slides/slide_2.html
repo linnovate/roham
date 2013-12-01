@@ -11,7 +11,7 @@
                 </div>                
                 <div class="body center-block">
                     <div class="category">
-                        <button ng-repeat="button in slides.categoryArr" type="button" class="btn category_{{button.name}}" ng-click="moveToTop($index)"></button>    
+                        <button ng-repeat="button in slides.slidesOrder" type="button" class="btn category_{{button.name}}" ng-click="moveToTop($index)"></button>    
                     </div>
                 </div>
             </div>

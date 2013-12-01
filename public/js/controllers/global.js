@@ -10,7 +10,7 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
             $scope.showSidebar = $location.path().split("/")[2] > 2 ? true : false;
 
             var newLocation = newLoc.split("/")[5];
-            var newIndex = Slides.categoryArr;
+            var newIndex = Slides.slidesOrder;
             // Slides.updateCurrentSlide(newLocation);
         });
 

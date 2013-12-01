@@ -83,13 +83,29 @@ exports.show = function(req, res) {
  * List of Views
  */
 exports.all = function(req, res) {
-    View.find().sort('-created').exec(function(err, views) {
+    View.find().sort('created').exec(function(err, views) {
         if (err) {
             res.render('error', {
                 status: 500
             });
         } else {
-            res.jsonp(views);
+            var slides = views,
+                newSlides = {};
+            slides.forEach(function(slide){
+                var questions = slide.fields,
+                    newQuestions = [];
+                questions.forEach(function(question){
+                    newQuestions.push({
+                        title: question.name,
+                        body: question.label
+                    });
+                });
+
+                newSlides[slide.slideId] = newQuestions;
+            });
+            var result = { result: newSlides};
+            console.log(newSlides);
+            res.jsonp(newSlides);
         }
     });
 };

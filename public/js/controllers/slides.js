@@ -8,14 +8,14 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.slides = Slides;
         
         //TODO: Change this
-        $scope.questions = Slides.questions["slide_" + $scope.currentSlide];
+        $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
 
         $scope.gotoNext = function(){
             // var next_id = parseInt($scope.currentSlide) + 1;
             var next_index = parseInt(Slides.currentIndex) + 1; 
             console.log("next", next_index);
-            // console.log($scope.slides.categoryArr[next_index.slide);
-            var next = $scope.slides.categoryArr[next_index].slide;
+            // console.log($scope.slides.slidesOrder[next_index.slide);
+            var next = $scope.slides.slidesOrder[next_index].slide;
             // // console.log("next",next);
             $location.path("/slide/" + next);
 

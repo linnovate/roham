@@ -5,7 +5,7 @@ angular.module('roham-admin.views').controller('ViewController', ['$scope', '$ro
 
             $scope.view.fields.push({
                 name: this.name,
-                label: this.label
+                label: this.label,
                 slideIdRef: this.slideIdRef
             });
             $scope.update();
