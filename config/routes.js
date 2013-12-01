@@ -1,12 +1,20 @@
+var async = require('async');
+
 module.exports = function(app, passport, auth) {
-    //User Routes
+     //User Routes
     var users = require('../app/controllers/users');
     app.get('/signin', users.signin);
     app.get('/signup', users.signup);
     app.get('/signout', users.signout);
 
-    //Setting up the users api
-    app.post('/users', users.create);
+
+     //Setting up the users api
+    app.get('/users', auth.requiresLogin, auth.user.isAdmin, users.all);
+    app.post('/users', auth.requiresLogin, auth.user.isAdmin, users.create);
+    app.put('/users/:userId', auth.requiresLogin, auth.user.isAdmin, users.update);
+    app.del('/users/:userId', auth.requiresLogin, auth.user.isAdmin, users.destroy);
+    
+    app.post('/users/signup', users.new);
 
     app.post('/users/session', passport.authenticate('local', {
         failureRedirect: '/signin',
@@ -60,19 +68,23 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the userId param
     app.param('userId', users.user);
 
-    //Article Routes
-    var articles = require('../app/controllers/articles');
-    app.get('/articles', articles.all);
-    app.post('/articles', auth.requiresLogin, articles.create);
-    app.get('/articles/:articleId', articles.show);
-    app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
-    app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
+    //View Routes
+    var views = require('../app/controllers/views');
+    app.get('/cms/views', views.all);
+    app.post('/cms/views', auth.requiresLogin, auth.user.isAdmin,  views.create);
+    app.get('/cms/views/:slideId', views.show);
+    app.put('/cms/views/:slideId', auth.requiresLogin, auth.user.isAdmin, views.update);
+    app.del('/cms/views/:slideId', auth.requiresLogin, auth.user.isAdmin, views.destroy);
 
-    //Finish with setting up the articleId param
-    app.param('articleId', articles.article);
+    //Finish with setting up the slideId param
+    app.param('slideId', views.view);
 
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);
+
+    //Admin route
+    var admin = require('../app/controllers/admin');
+    app.get('/manage', admin.render);
 
 };

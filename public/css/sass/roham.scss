@@ -395,11 +395,12 @@ body{
 
 }
 
-survey-question{
+survey-question,.survey-question{
 	width: 60%;
 	float: right;
 	margin-right: 25%;
 }
+
 
 .question-wrapper{
 	text-align: right;
@@ -419,6 +420,16 @@ survey-question{
 		width: 60%;
 		text-align: right;
 		float: right;
+	}
+
+	.inputs-wrapper{
+		float: right;
+		text-align: right;
+		display:block;
+		width: 100%;
+		.row-fluid{
+			float: right;
+		}
 	}
 
 	.ui-slider{
@@ -514,6 +525,49 @@ survey-question{
 	    a.ui-slider-handle:after {
 	            
 	    }
+	}
+}
+
+.survey-question{
+	&:first-child{
+		margin-top: 5%;
+	}
+	.question-wrapper{
+		height: auto;
+		float: right;
+		text-align: right;
+		width: 100%;
+		.question-title{		
+			font-weight: 700;
+			font-size: 20px;
+			text-align: right
+			text-		}
+		.question-body{
+			font-size: 16px;
+			width: 100%;
+			text-align: right;
+			float: right;
+		}
+		.inputs-wrapper{
+			margin-top: 2%;
+			float: right;
+			text-align: right;
+			display:block;
+			width: 100%;
+			.row-fluid{
+				float: right;
+				div {
+					float: right;
+				}
+			}
+		}
+
+		.textarea-wrapper{
+			margin-top: 3%;
+			textarea{
+				text-align: right;
+			}
+		}
 	}
 }
 

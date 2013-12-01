@@ -17,15 +17,22 @@ exports.user = {
             return res.send(401, 'User is not authorized');
         }
         next();
+    },
+    isAdmin: function(req, res, next) {
+        console.log(req.user);
+        if (req.user.role !== "admin") {
+            return res.send(401, 'User is not authorized');
+        }
+        next();
     }
 };
 
 /**
- * Article authorizations routing middleware
+ * project authorizations routing middleware
  */
-exports.article = {
+exports.project = {
     hasAuthorization: function(req, res, next) {
-        if (req.article.user.id != req.user.id) {
+        if (req.project.user.id != req.user.id) {
             return res.send(401, 'User is not authorized');
         }
         next();
