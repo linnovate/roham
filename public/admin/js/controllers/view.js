@@ -19,7 +19,6 @@ angular.module('roham-admin.views').controller('ViewController', ['$scope', '$ro
                     $scope.view.fields.splice(i, 1);
                 }
             }
-
             $scope.update();
         };
 

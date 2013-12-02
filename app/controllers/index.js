@@ -10,3 +10,9 @@ exports.render = function(req, res) {
         user: req.user ? JSON.stringify(req.user) : "null"
     });
 };
+
+
+exports.session = function(req, res){
+	// res.json(req);
+	res.json({sessionId: req.sessionID});
+};

@@ -1,7 +1,6 @@
 angular.module('mean.slides').factory("Slides", ["$location", "$http",
-    function($location,$http) {
+    function($location, $http) {
         var _this = this;
-
         getQuestions();
 
         _this._obj = {
@@ -68,20 +67,29 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
                 label: 'אחר',
                 color: 'blue'
             }],
-
+            getQuestions: getQuestions,
+            saveSlideAnswers: saveSlideAnswers,
             moveToTop: moveToTop,
             updateCurrentSlide: updateCurrentSlide
         };
 
-        function getQuestions(){            
-            $http.get('/cms/views').success(function(data){
-                console.log(data);
-                // data.forEach(function(slide){
-                //     console.log(slide);
-                //     // _this._obj.questions[slide.slideId] = slide.fields;
-                // });
-                // console.log(_this._obj);
-                _this._obj.questions = data;
+        function getQuestions() {
+            $http.get('/cms/views').success(function(slides) {
+                var newSlides = {};
+                slides.forEach(function(slide){
+                    var questions = slide.fields,
+                        newQuestions = [];
+                        questions.forEach(function(question){
+                        newQuestions.push({
+                            title: question.name,
+                            body: question.label,
+                            val: 0
+                        });
+                    });
+
+                    newSlides[slide.slideId] = newQuestions;
+                });
+                _this._obj.questions = newSlides;
             });
         }
 
@@ -92,21 +100,35 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
 
             if (index != -1) {
                 var obj = _this._obj.slidesOrder[index];
+
                 //Make a copy of the slidesOrder with slice(0)
                 var n = _this._obj.slidesOrder.slice(0);
                 var q = n[index];
+
                 n.splice(index, 1);
                 n.unshift(q);
-                // _this._obj.slidesOrder = n;
-                angular.copy(n, _this._obj.slidesOrder);
-                updateCurrentSlide(newSlide,0);
 
+                angular.copy(n, _this._obj.slidesOrder);
+
+                updateCurrentSlide(newSlide, 0);
             }
 
             return _this._obj;
         }
 
-        function updateCurrentSlide(slide_id,index){
+        function saveSlideAnswers(slide_id,questions){
+            var date = {
+                slide_id: slide_id,
+                questions: questions,
+                session_id: Global.getSessionId()
+            };
+
+            $http.post("/submit",data).success(function(){
+
+            });   
+        }
+
+        function updateCurrentSlide(slide_id, index) {
             _this._obj.currentSlide = slide_id;
             _this._obj.currentIndex = index;
         }

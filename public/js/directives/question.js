@@ -5,13 +5,14 @@ window.app.directive('surveyQuestion', function() {
         scope: { // attributes bound to the scope of the directive
             // val: '=',
             title: "@title",
-            questionModel: "=questionmodel"
+            ngModel: "="
         },
         transclude: true,
-        templateUrl: 'views/question.html',
-
-        link: function(scope, element, attrs) {
-
-        }
+        templateUrl: 'views/question.html'
+        // compile: function()
+        // link: function(scope, element, attrs) {
+        //     console.log(scope);
+        //     // scope.sliderValue = scope.questionmodel;    
+        // }
     };
 });

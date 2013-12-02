@@ -3,8 +3,12 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         $scope.global = Global;
         $scope.slides = angular.copy(Slides);
 
-        $scope.moveToTop = function(index){
+        $scope.moveToTop = function(index) {
             Slides = Slides.moveToTop(index);
+        };
+
+        $scope.init = function() {
+            // Slides.getQuestions();
         };
 
     }

@@ -1,6 +1,5 @@
-angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeParams', '$location', 'Global', 'Slides',
-    function($scope, $routeParams, $location, Global, Slides) {
-        $scope.global = Global;
+angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeParams', '$location', 'Slides', 'storage',
+    function($scope, $routeParams, $location, Slides, storage) {
         $scope.transitionClass = "index";
         $scope.currentSlide = $location.path().split("/")[2];
         $scope.showSidebar = $scope.currentSlide > 2 ? true : false;
@@ -8,10 +7,6 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
         $scope.$on('$locationChangeSuccess', function(event, newLoc, oldLoc) {
             $scope.transitionClass = $scope.getDirection(newLoc, oldLoc);
             $scope.showSidebar = $location.path().split("/")[2] > 2 ? true : false;
-
-            var newLocation = newLoc.split("/")[5];
-            var newIndex = Slides.slidesOrder;
-            // Slides.updateCurrentSlide(newLocation);
         });
 
 
@@ -31,6 +26,13 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
             return newLocation > oldLocation ? "forward" : "back";
 
         };
+
+        $scope.init = function(){
+            Global.getSessionId(function(sessionId){
+                console.log("Joined session: ", sessionId);
+            });
+        };
+
     }
 
 ]);

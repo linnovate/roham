@@ -5,8 +5,7 @@ angular.module('roham-admin.views').controller('ViewsController', ['$scope', 'Vi
             var view = new Views({
                 name: this.name
             });
-
-            console.log($scope.views);
+            
             view.$save(function(response) {
                 $scope.views.push(response);
             });

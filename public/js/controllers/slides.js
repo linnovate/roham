@@ -7,21 +7,18 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.currentSlide = $routeParams.slide_id;
         $scope.slides = Slides;
         
-        //TODO: Change this
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
 
+        // console.log($scope.questions);
+
         $scope.gotoNext = function(){
-            // var next_id = parseInt($scope.currentSlide) + 1;
-            var next_index = parseInt(Slides.currentIndex) + 1; 
-            console.log("next", next_index);
-            // console.log($scope.slides.slidesOrder[next_index.slide);
-            var next = $scope.slides.slidesOrder[next_index].slide;
-            // // console.log("next",next);
+            var next_index = parseInt(Slides.currentIndex) + 1,
+                next = $scope.slides.slidesOrder[next_index].slide;
+
             $location.path("/slide/" + next);
 
+            Slides.saveSlideAnswers(Global.session_id,$scope.currentSlide,$scope.questions);
             Slides.updateCurrentSlide(next,next_index);
-
-        };
-       
+        };       
     }
 ]);

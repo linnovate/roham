@@ -3,12 +3,10 @@
 	
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<survey-question ng-repeat="question in questions" title="{{question.title}}" questionmodel="question.val">{{question.body}} </survey-question>		
+			<survey-question ng-repeat="question in questions" title="{{question.title}}" ng-model="question.val">{{question.body}}</survey-question>		
 		</div>
 		<div class="row-fluid">
 			<a class="btn_link" data-ng-click="gotoNext()">Next</a>
 		</div>
 	</div>
-
-
 </section>

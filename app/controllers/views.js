@@ -89,23 +89,8 @@ exports.all = function(req, res) {
                 status: 500
             });
         } else {
-            var slides = views,
-                newSlides = {};
-            slides.forEach(function(slide){
-                var questions = slide.fields,
-                    newQuestions = [];
-                questions.forEach(function(question){
-                    newQuestions.push({
-                        title: question.name,
-                        body: question.label
-                    });
-                });
-
-                newSlides[slide.slideId] = newQuestions;
-            });
-            var result = { result: newSlides};
-            console.log(newSlides);
-            res.jsonp(newSlides);
+            
+            res.jsonp(views);
         }
     });
 };
