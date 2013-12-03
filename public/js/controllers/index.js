@@ -8,7 +8,10 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         };
 
         $scope.init = function() {
-            // Slides.getQuestions();
+            Global.getSessionId(function(sessionId){
+                console.log("Joined session: ", sessionId);
+            });
+        
         };
 
     }

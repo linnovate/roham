@@ -17,7 +17,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
 
             $location.path("/slide/" + next);
 
-            Slides.saveSlideAnswers(Global.session_id,$scope.currentSlide,$scope.questions);
+            Slides.saveSlideAnswers($scope.currentSlide,$scope.questions,Global.session_id);
             Slides.updateCurrentSlide(next,next_index);
         };       
     }

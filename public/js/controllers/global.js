@@ -9,12 +9,10 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
             $scope.showSidebar = $location.path().split("/")[2] > 2 ? true : false;
         });
 
-
         $scope.getCurrentSlide = function() {
             var loc = $location.path().split("_");
             return loc.length > 1 ? loc[1] : 0;
         };
-
 
         $scope.getDirection = function(newLoc, oldLoc) {
             if (newLoc === oldLoc) return;
@@ -24,15 +22,6 @@ angular.module('mean.slides').controller('GlobalController', ['$scope', '$routeP
                 return "forward";
             }
             return newLocation > oldLocation ? "forward" : "back";
-
         };
-
-        $scope.init = function(){
-            Global.getSessionId(function(sessionId){
-                console.log("Joined session: ", sessionId);
-            });
-        };
-
     }
-
 ]);

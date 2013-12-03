@@ -116,11 +116,11 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             return _this._obj;
         }
 
-        function saveSlideAnswers(slide_id,questions){
-            var date = {
-                slide_id: slide_id,
-                questions: questions,
-                session_id: Global.getSessionId()
+        function saveSlideAnswers(slide_id,questions,session_id){
+            var data = {
+                slideId: slide_id,
+                answers: questions,
+                sessionId: session_id
             };
 
             $http.post("/submit",data).success(function(){

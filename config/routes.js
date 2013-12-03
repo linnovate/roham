@@ -84,6 +84,10 @@ module.exports = function(app, passport, auth) {
     app.get('/', index.render);
     app.get('/session', index.session);
 
+    //Saving answers
+    var answers = require('../app/controllers/answers');
+    app.post('/submit', answers.submit);
+
     //Admin route
     var admin = require('../app/controllers/admin');
     app.get('/manage', admin.render);
