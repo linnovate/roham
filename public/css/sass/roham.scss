@@ -1,5 +1,8 @@
 @import url('http://fonts.googleapis.com/earlyaccess/alefhebrew.css');
 @import "compass";
+/* @import "compass/layout/stretching";
+@import "compass/utilities";
+@import "compass/css3"; */
 
 /*************@mixin*********/
 /***************************/
@@ -540,8 +543,8 @@ survey-question,.survey-question{
 		.question-title{		
 			font-weight: 700;
 			font-size: 20px;
-			text-align: right
-			text-		}
+			text-align: right;
+		}
 		.question-body{
 			font-size: 16px;
 			width: 100%;
@@ -570,18 +573,67 @@ survey-question,.survey-question{
 		}
 	}
 }
+.slide_13 {
+ direction: rtl;
+  .content {
+     width: 62.250em;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+     margin-top: 5.625em;
+     h1 {
+     	 font-size: 3.438em;
+     	 color: white;
+     	 font-weight: initial;
+     }
+     .bigTitle {
+       font-size: 4.063em;
+     	 font-weight: bold;
+     }
+     p {
+       font-size: 1.563em;
+       color: white;
+       margin-top: 5em;
+     }
+     img {
+       margin-top: 2.750em;
+     }
+     .btnFb  {
+     	display: list-item;
+     	margin-left: auto;
+      margin-right: auto;
+     }
+     .fb {
+       background-image:url(../../img/buttons/share-on-facebook.png);
+       width: 26.87em;
+			 height: 5.9em;
+       background-repeat:no-repeat;
+       margin-top: 0.875em;
+     }
+    .like {
+       background-image:url(../../img/buttons/like-btt-last-page.1.png);
+       width: 10.65em;
+       height: 4.49em;
+       background-repeat:no-repeat;
+       margin-top: 1.500em;
+    }
+  }
+  .endLink {
+  	color: #3bb9ff;
+  	font-size: 1.563em;
+  	text-decoration: underline;
+    margin-left: 3.750em;
+    float: left; 
+  }
+}
 
 /*Background to sliders*/
 /***********************/
 .index{
 
 	@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjIxIiBzdG9wLWNvbG9yPSIjZDBlMmY2Ii8+PHN0b3Agb2Zmc2V0PSIwLjgyIiBzdG9wLWNvbG9yPSIjYjRkMGVmIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNiNGQwZWYiIC8+PHJlY3QgeD0iMCUiIHk9Ii0xMy4wODQxJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTI2LjE2ODIlIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==),
-		radial-gradient(farthest-side circle at center center, #d0e2f6 21%, #b4d0ef 82%));
-/*		background-image: url(../../img/background/israel-logo.png);
-		background-repeat: no-repeat;
-		background-position-x: 30px;
-		background-position-y: 62px;*/		
-	}
+		radial-gradient(farthest-side circle at center center, #d0e2f6 21%, #b4d0ef 82%));	
+}
 
 	.slides{
 		.slide_1{
