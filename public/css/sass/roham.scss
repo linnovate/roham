@@ -598,23 +598,25 @@ survey-question,.survey-question{
      img {
        margin-top: 2.750em;
      }
-     .btnFb  {
-     	display: list-item;
-     	margin-left: auto;
-      margin-right: auto;
+    .btnFb  {
+       display: list-item;
+       list-style-type: none;
+       margin-left: auto;
+       margin-right: auto;
+       border: 0;
+       background-color: transparent;
+       background-repeat:no-repeat;
      }
      .fb {
        background-image:url(../../img/buttons/share-on-facebook.png);
        width: 26.87em;
-			 height: 5.9em;
-       background-repeat:no-repeat;
+	   height: 5.9em;
        margin-top: 0.875em;
      }
     .like {
        background-image:url(../../img/buttons/like-btt-last-page.1.png);
        width: 10.65em;
        height: 4.49em;
-       background-repeat:no-repeat;
        margin-top: 1.500em;
     }
   }

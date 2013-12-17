@@ -22,35 +22,13 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         };
 
         $scope.getInitEndPage = function() {
-          console.log('lalala');
           $http.get('/cms/views/slide-13').success(function(slide) {
-            console.log(slide);
-            $scope.view = slide;
-            console.log($scope.view);
-
+            $scope.views = slide;
+            $scope.values = {};
+            angular.forEach($scope.views.fields,function(field) {
+                $scope.values[field.name] = field.label;
+            });
           });
         };
-
-
-/*                function getQuestions() {
-            $http.get('/cms/views').success(function(slides) {
-                var newSlides = {};
-                slides.forEach(function(slide){
-                    var questions = slide.fields,
-                        newQuestions = [];
-                        questions.forEach(function(question){
-                        newQuestions.push({
-                            title: question.name,
-                            body: question.label,
-                            val: 0
-                        });
-                    });
-
-                    newSlides[slide.slideId] = newQuestions;
-                });
-                _this._obj.questions = newSlides;
-            });
-        }*/
-
     }
 ]);

@@ -1,15 +1,15 @@
 <section class="slide slide_2 slide_13" ng-controller="SlidesController" ng-init="getInitEndPage()" >
 	<div class="content">
 		<div>
-			<h1 class="bigTitle">{{view}}</h1>
-			<h1>משרד ראש הממשלה מודה לך עך מילוי הסקר</h1>
+			<h1 class="bigTitle">{{values['Title']}}</h1>
+			<h1>{{values['SubTitle']}}</h1>
 		</div>
 		<img src="../../img/background/israel-logo.1.png"/>
 		<div>
-			<p>יש לך חברים שגם להם יש רצון ודעה להשפיע?</p>
-			<button class="btnFb fb"></button>
-			<button class="btnFb like"></button>
+			<p>{{values['Question']}}</p>
+			<a href='{{values["Link-Share"]}}' class="btnFb fb"></a>
+			<a href='{{values["Link-like"]}}' class="btnFb like"></a>
 		</div>
 	</div>
-	<a href="" class="endLink">עבור לאתר משרד ראש הממשלה</a>
+	<a href='{{values["Link-url"]}}' class="endLink">{{values['Link']}}</a>
 </section>
