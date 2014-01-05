@@ -1,5 +1,8 @@
 <section class="slide slide_3" ng-controller="SlidesController">
-	<h4>הזז את הסמן לפי שביעות רצונך, 1 - איני שבע רצון כלל, 5 - אני מאוד שבע רצון</h4>	
+	<h4>
+	לפניך נושאים המשפיעים על איכות החיים בישראל בתחום הבריאות.<br/>
+	סמן/סמני באיזו מידה הם משפיעים לדעתך על איכות החיים בישראל (1 - השפעה מועטה מאד; 5 - השפעה רבה מאד)
+	</h4>
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<survey-question ng-repeat="question in questions" title="{{question.title}}" ng-model="question.val">{{question.body}} </survey-question>		

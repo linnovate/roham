@@ -1,15 +1,12 @@
 angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeParams', '$location', 'Global', 'Slides','$http',
     function($scope, $routeParams, $location, Global, Slides, $http) {
         $scope.global = Global;
-
         $scope.transitionClass = Global.transitionClass;
         $scope.isActiveBtn = [false, false];
         $scope.currentSlide = $routeParams.slide_id;
         $scope.slides = Slides;
         
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
-
-        // console.log($scope.questions);
 
         $scope.gotoNext = function(){
             var next_index = parseInt(Slides.currentIndex) + 1,
@@ -28,6 +25,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
             angular.forEach($scope.views.fields,function(field) {
                 $scope.values[field.name] = field.label;
             });
+            console.log($scope.values);
           });
         };
     }

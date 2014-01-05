@@ -7,66 +7,71 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             currentSlide: 0,
             currentIndex: 0,
             questions: {},
-            slidesOrder: [{
+            slidesOrder: [
+            {
                 slide: 3,
-                name: 'family',
-                label: 'משפחה',
-                color: 'red',
-                questions: []
-            }, {
-                slide: 4,
-                name: 'eco',
-                label: 'כלכלה',
-                color: 'dark_green',
-                questions: []
-            }, {
-                slide: 5,
-                name: 'sec',
-                label: 'בטחון',
-                color: 'pink',
-                questions: []
-            }, {
-                slide: 6,
                 name: 'edu',
                 label: 'השכלה',
                 color: 'bright_turqioze',
                 questions: []
-            }, {
-                slide: 7,
+            },
+            {
+                slide: 4,
                 name: 'emplo',
                 label: 'תעסוקה',
                 color: 'yellow',
                 questions: []
-            }, {
-                slide: 8,
-                name: 'envi',
-                label: 'סביבה',
-                color: 'bright_green',
-                questions: []
-            }, {
-                slide: 9,
-                name: 'law',
-                label: 'משפט',
-                color: 'orange',
-                questions: []
-            }, {
-                slide: 10,
-                name: 'dior',
-                label: 'דיור',
-                color: 'dark_turqioze',
-                questions: []
-            }, {
-                slide: 11,
+            }, 
+            {
+                slide: 5,
                 name: 'health',
                 label: 'בריאות',
                 color: 'purple',
                 questions: []
-            }, {
-                slide: 12,
-                name: 'other',
-                label: 'אחר',
-                color: 'blue'
-            }],
+            },
+            {
+                slide: 6,
+                name: 'envi',
+                label: 'סביבה',
+                color: 'bright_green',
+                questions: []
+            }, 
+            {
+                slide: 7,
+                name: 'social',
+                label: 'רווחה',
+                color: 'yellow',
+                questions: []
+            },
+            {
+                slide: 8,
+                name: 'involv',
+                label: 'מעורבות',
+                color: 'orange',
+                questions: []
+            }, 
+            {
+                slide: 9,
+                name: 'dior',
+                label: 'דיור',
+                color: 'dark_turqioze',
+                questions: []
+            },
+            {
+                slide: 10,
+                name: 'sec',
+                label: 'בטחון',
+                color: 'pink',
+                questions: []
+            },
+            {
+                slide: 11,
+                name: 'mater',
+                label: 'רמת חיים',
+                color: 'dark_turqioze',
+                questions: []
+            },
+            ],
             getQuestions: getQuestions,
             saveSlideAnswers: saveSlideAnswers,
             moveToTop: moveToTop,
@@ -122,7 +127,6 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
                 answers: questions,
                 sessionId: session_id
             };
-
             $http.post("/submit",data).success(function(){
 
             });   

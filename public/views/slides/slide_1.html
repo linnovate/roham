@@ -6,18 +6,18 @@
             <div class="title_ask">גיל</div>
             <div class="btn-group age">
 
+                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'under_18'">מתחת לגיל 18</button>
+                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'18_24'">18-24</button>
+                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'25_44'">25-44</button>
+                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'45_65'">45-65</button>
                 <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'over_65'" data-ng-init="{selected:true}" data-ng-class="{true: '.btn_grey.active'}[selected]">מעל 65</button>
-                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'50_64'">50-64</button>
-                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'30_49'">30-49</button>
-                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'18_19'">18-19</button>
-                <button type="button" class="btn btn_grey" ng-model="age" btn-radio="'under_18'">מתחת ל18</button>
             </div>
             </br>
             </br>
             </br>
             </br>
             </br>
-            <div class="title_ask">מגדר</div>
+            <div class="title_ask">מין</div>
             <div class="btn-group kind">
 
                 <button type="button" class="btn btn_grey" ng-model="kind" btn-radio="'male'">זכר</button>
@@ -28,13 +28,27 @@
             </br>
             </br>
             </br>
-            <div class="title_ask">מצב משפחתי</div>
+            <!-- <div class="title_ask">מצב משפחתי</div>
             <div class="btn-group status">
 
                 <button type="button" class="btn btn_grey" ng-model="status" btn-radio="'single'">רווק/ה</button>
-                <button type="button" class="btn btn_grey" ng-model="status" btn-radio="'married'">נשואי/אה</button>
+                <button type="button" class="btn btn_grey" ng-model="status" btn-radio="'married'">נשוי/אה</button>
                 <button type="button" class="btn btn_grey" ng-model="status" btn-radio="'deportation'">גרוש/ה</button>
                 <button type="button" class="btn btn_grey" ng-model="status" btn-radio="'widower'">אלמן/נה</button>
+            </div>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br> -->
+            <div class="title_ask">השכלה</div>
+            <div class="btn-group education">
+
+                <button type="button" class="btn btn_grey" ng-model="education" btn-radio="'1'">יסודי או חטיבת ביניים</button>
+                <button type="button" class="btn btn_grey" ng-model="education" btn-radio="'2'">תיכון ללא בגרות</button>
+                <button type="button" class="btn btn_grey" ng-model="education" btn-radio="'3'">תיכון עם בגרות</button>
+                <button type="button" class="btn btn_grey" ng-model="education" btn-radio="'4'">על תיכוני</button>
+                <button type="button" class="btn btn_grey" ng-model="education" btn-radio="'4'">אקדמי</button>
             </div>
 
         </div>

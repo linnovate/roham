@@ -27,7 +27,7 @@ angular.module('ui.slider', []).value('uiSliderConfig', {})
                         }
                         $(elm).slider(options);
                         // console.log();
-                        var tooltipHtml = "<div class='slider_tooltip' value='0'>מאוד לא שבע רצון</div>";
+                        var tooltipHtml = "<div class='slider_tooltip' value='0'>השפעה מועטה מאד</div>";
                         var handle = $(elm).children(".ui-slider-handle");
                         if (handle.children().length === 0 ){
                             handle.append(tooltipHtml);    
@@ -68,19 +68,19 @@ angular.module('ui.slider', []).value('uiSliderConfig', {})
                         var tooltip= $(elm).children(".ui-slider-handle").children(".slider_tooltip");
                         switch(ui.value){
                             case 0:
-                                tooltip.html("מאוד לא שבע רצון");                                
+                                tooltip.html("השפעה מועטה מאד");                                
                             break;
                             case 25:
-                                tooltip.html("לא שבע רצון");
+                                tooltip.html("השפעה מועטה");
                             break;
                             case 50:
-                                tooltip.html("אדיש");
+                                tooltip.html("השפעה בינונית");
                             break;
                             case 75:
-                                tooltip.html("שבע רצון");
+                                tooltip.html("השפעה רבה");
                             break;
                             case 100:
-                                tooltip.html("מאוד שבע רצון");
+                                tooltip.html("השפעה רבה מאד");
                             break;
                         }
                         tooltip.attr('value',ui.value);
