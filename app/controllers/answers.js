@@ -14,9 +14,10 @@ exports.submit = function(req, res) {
     }, function(err, answers) {
         if (answers) {
             console.log("session exists");
+            console.log(req.body);
             //If there are answers, reject any exisiting answer by slideId, and insert the updated one
             var newAnswers = _.reject(answers.results, {
-                'slideId': req.body.slideId
+                'slideId': req.body
             });
             newAnswers.push(req.body.answers);
             answers.results = newAnswers;

@@ -19,7 +19,10 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         };
 
         $scope.getInitEndPage = function() {
-          $http.get('/cms/views/slide-13').success(function(slide) {
+            console.log("getInitEndPage");
+          $http.get('/cms/views/slide-12').success(function(slide) {
+            $scope.slide= slide;
+            console.log(slide);
             $scope.views = slide;
             $scope.values = {};
             angular.forEach($scope.views.fields,function(field) {
