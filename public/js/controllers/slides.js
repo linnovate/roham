@@ -6,15 +6,21 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.currentSlide = $routeParams.slide_id;
         $scope.slides = Slides;
         
+        
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
 
         $scope.gotoNext = function(){
+            console.log($scope.data);
+            $scope.data["slide-" + $scope.currentSlide] = $scope.questions;
+            console.log($scope.data);
+
+
             var next_index = parseInt(Slides.currentIndex) + 1,
                 next = $scope.slides.slidesOrder[next_index].slide;
 
             $location.path("/slide/" + next);
 
-            Slides.saveSlideAnswers($scope.currentSlide,$scope.questions,Global.session_id);
+            // Slides.saveSlideAnswers($scope.currentSlide,$scope.questions,Global.session_id);
             Slides.updateCurrentSlide(next,next_index);
         };
 
@@ -31,5 +37,9 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
             console.log($scope.values);
           });
         };
+
+        $scope.save = function(){
+            Slides.saveSlideAnswers($scope.currentSlide,$scope.questions,Global.session_id);
+        }
     }
 ]);

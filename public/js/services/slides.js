@@ -11,14 +11,14 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             {
                 slide: 3,
                 name: 'edu',
-                label: 'השכלה',
+                label: 'השכלה, חינוך וכישורים',
                 color: 'bright_turqioze',
                 questions: []
             },
             {
                 slide: 4,
                 name: 'emplo',
-                label: 'תעסוקה',
+                label: 'איכות התעסוקה',
                 color: 'yellow',
                 questions: []
             }, 
@@ -39,38 +39,45 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             {
                 slide: 7,
                 name: 'family',
-                label: 'רווחה',
+                label: 'רווחה אישית וחברתית',
                 color: 'red',
                 questions: []
             },
             {
                 slide: 8,
                 name: 'involv',
-                label: 'מעורבות',
+                label: 'מעורבות אזרחית וממשל',
                 color: 'orange',
                 questions: []
             }, 
             {
                 slide: 9,
                 name: 'dior',
-                label: 'דיור',
+                label: 'תשתיות ודיור',
                 color: 'dark_turqioze',
                 questions: []
             },
             {
                 slide: 10,
                 name: 'sec',
-                label: 'בטחון',
+                label: 'ביטחון אישי',
                 color: 'pink',
                 questions: []
             },
             {
                 slide: 11,
                 name: 'eco',
-                label: 'רמת חיים',
+                label: 'רמת חיים חומרית',
                 color: 'dark_turqioze',
                 questions: []
             },
+            {
+                slide: 12,
+                name: 'other',
+                label: 'אחר',
+                color: 'blue',
+                questions: []
+            }
             ],
             getQuestions: getQuestions,
             saveSlideAnswers: saveSlideAnswers,
