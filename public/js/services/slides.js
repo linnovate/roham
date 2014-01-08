@@ -38,9 +38,9 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             }, 
             {
                 slide: 7,
-                name: 'social',
+                name: 'family',
                 label: 'רווחה',
-                color: 'yellow',
+                color: 'red',
                 questions: []
             },
             {
@@ -66,7 +66,7 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             },
             {
                 slide: 11,
-                name: 'mater',
+                name: 'eco',
                 label: 'רמת חיים',
                 color: 'dark_turqioze',
                 questions: []
