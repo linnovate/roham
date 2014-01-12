@@ -17,11 +17,23 @@ angular.module('mean.system').factory("Global", ['storage', '$http',
             }
         }
 
+        function getAnswers(json){
+            if (_this._data.answers === undefined){
+                _this._data.answers = [];
+            }
+            if (json){
+                _this._data.answers.push(json);
+            }
+            console.log(_this._data.answers);
+            return _this._data.answers;
+        }
+
         _this._data = {
             session_id: 0,
             user: window.user,
             authenticated: !! window.user,
-            getSessionId: getSessionId
+            getSessionId: getSessionId,
+            getAnswers: getAnswers
         };
 
         getSessionId(function(){});

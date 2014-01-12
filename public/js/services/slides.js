@@ -45,7 +45,7 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             },
             {
                 slide: 8,
-                name: 'involv',
+                name: 'civ',
                 label: 'מעורבות אזרחית וממשל',
                 color: 'orange',
                 questions: []
@@ -128,10 +128,9 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             return _this._obj;
         }
 
-        function saveSlideAnswers(slide_id,questions,session_id){
+        function saveSlideAnswers(answers,session_id){
             var data = {
-                slideId: slide_id,
-                answers: questions,
+                answers: answers,
                 sessionId: session_id
             };
             $http.post("/submit",data).success(function(){

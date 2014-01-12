@@ -1,4 +1,4 @@
-<section class="slide slide_3" ng-controller="SlidesController" ng-init="getInitEndPage()">
+<section class="slide slide_3" ng-controller="SlidesController">
     <div class="container-fluid">
         <div class="row-fluid">
             <div ng-repeat="question in slide.fields">
@@ -13,7 +13,7 @@
         </div>
 
         <div class="row-fluid">
-            <a class="btn_link" data-ng-click="gotoNext()">Next</a>
+            <a class="btn_link" data-ng-click="goToEnd()">Next</a>
         </div>
     </div>
 </section>

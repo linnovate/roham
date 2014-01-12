@@ -67,19 +67,19 @@ angular.module('ui.slider', []).value('uiSliderConfig', {})
                     $(elm).bind('slide', function(event, ui) {
                         var tooltip= $(elm).children(".ui-slider-handle").children(".slider_tooltip");
                         switch(ui.value){
-                            case 0:
+                            case 1:
                                 tooltip.html("השפעה מועטה מאד");                                
                             break;
-                            case 25:
+                            case 2:
                                 tooltip.html("השפעה מועטה");
                             break;
-                            case 50:
+                            case 3:
                                 tooltip.html("השפעה בינונית");
                             break;
-                            case 75:
+                            case 4:
                                 tooltip.html("השפעה רבה");
                             break;
-                            case 100:
+                            case 5:
                                 tooltip.html("השפעה רבה מאד");
                             break;
                         }
