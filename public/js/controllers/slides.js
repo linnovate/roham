@@ -14,7 +14,6 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
             next = $scope.slides.slidesOrder[next_index].slide;
 
             $location.path("/slide/" + next);
-
             Slides.updateCurrentSlide(next,next_index);
         };
 
