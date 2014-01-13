@@ -44,16 +44,11 @@ exports.submit = function(req, res) {
     Answers.findOne({
         sessionId: req.body.sessionId
     }, function(err, answers) {
-        if (answers) {
-            answers.results = req.body.answers;
-        } else {
+        if (!answers) {
             answers = new Answers();
             answers.sessionId = req.body.sessionId;
-            answers.results = [{
-                slideId: req.body.slideId,
-                answers: req.body.answers
-            }];
         }
+        answers.results = req.body.results;
         console.log(answers);
         answers.save(function(err, doc) {
             console.log("saved", err, doc);
@@ -61,10 +56,10 @@ exports.submit = function(req, res) {
     });
 };
 
-exports.exportToPDF = function(req, res) {
+exports.exportToCSV = function(req, res) {
     Answers.find({}, function(err, answers){
-        if (err) throw err;
-        console.log(answers);
-    })
+        if (err) throw err; 
+        res.jsonp(answers);
+    });
 };
 

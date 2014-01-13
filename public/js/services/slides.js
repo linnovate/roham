@@ -80,7 +80,7 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             }
             ],
             getQuestions: getQuestions,
-            saveSlideAnswers: saveSlideAnswers,
+            saveAllAnswers: saveAllAnswers,
             moveToTop: moveToTop,
             updateCurrentSlide: updateCurrentSlide
         };
@@ -128,9 +128,9 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             return _this._obj;
         }
 
-        function saveSlideAnswers(answers,session_id){
+        function saveAllAnswers(answers,session_id){
             var data = {
-                answers: answers,
+                results: answers,
                 sessionId: session_id
             };
             $http.post("/submit",data).success(function(){

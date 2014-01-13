@@ -16,7 +16,7 @@ var AnswersSchema = new Schema({
         answers: [{
             title: String,
             body: String,
-            val: Number
+            val: String
         }]   
     }]
 });

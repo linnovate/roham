@@ -7,9 +7,18 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.slides = Slides;
         
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
+
+        function saveSlideAnswers(){
+            if ($scope.currentSlide < 12){
+                name = $scope.slides.slidesOrder[parseInt(Slides.currentIndex)].label;
+                other_question = {"body" : name, "title" : "נושא נוסף בתחום ה" + name, "val" : ($scope.other) ? $scope.other : ""};
+                $scope.questions.push(other_question);
+            }
+            Global.getAnswers({slideId: "slide-" + $scope.currentSlide, answers: $scope.questions});
+        }
         
         $scope.gotoNext = function(){
-            Global.getAnswers({slideId: "slide-" + $scope.currentSlide, answers: $scope.questions});
+            saveSlideAnswers();
             var next_index = parseInt(Slides.currentIndex) + 1,
             next = $scope.slides.slidesOrder[next_index].slide;
 
@@ -18,7 +27,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         };
 
         $scope.goToEnd = function(){
-            Global.getAnswers({slideId: "slide-12", answers: $scope.questions});
+            saveSlideAnswers();
             $location.path("/slide/13");  
         };
 
@@ -30,7 +39,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
                     "body" : field,
                     "title" : field,
                     "val" : $scope[field]
-                }
+                };
                 data.push(question);
             });
             Global.getAnswers({slideId: "slide-1", answers: data});
@@ -38,7 +47,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         };
 
         $scope.getInitEndPage = function() {
-            Slides.saveSlideAnswers(Global.getAnswers(null),Global.session_id);
+            Slides.saveAllAnswers(Global.getAnswers(null),Global.session_id);
             $http.get('/cms/views/slide-13').success(function(slide) {
                 $scope.views = slide;
                 $scope.values = {};
