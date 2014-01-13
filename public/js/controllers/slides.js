@@ -14,7 +14,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
                 other_question = {"body" : name, "title" : "נושא נוסף בתחום ה" + name, "val" : ($scope.other) ? $scope.other : ""};
                 $scope.questions.push(other_question);
             }
-            Global.getAnswers({slideId: "slide-" + $scope.currentSlide, answers: $scope.questions});
+            Global.getAnswers({id: parseInt($scope.currentSlide) ,slideId: "slide-" + $scope.currentSlide, answers: $scope.questions});
         }
         
         $scope.gotoNext = function(){
@@ -28,7 +28,8 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
 
         $scope.goToEnd = function(){
             saveSlideAnswers();
-            $location.path("/slide/13");  
+            Slides.saveAllAnswers(Global.getAnswers(null),Global.session_id);
+            $location.path("/slide/13");
         };
 
         $scope.setFirstSlide = function(){
@@ -42,12 +43,11 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
                 };
                 data.push(question);
             });
-            Global.getAnswers({slideId: "slide-1", answers: data});
+            Global.getAnswers({id: 1, slideId: "slide-1", answers: data});
             $location.path("/slide/2");
         };
 
         $scope.getInitEndPage = function() {
-            Slides.saveAllAnswers(Global.getAnswers(null),Global.session_id);
             $http.get('/cms/views/slide-13').success(function(slide) {
                 $scope.views = slide;
                 $scope.values = {};

@@ -129,8 +129,15 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
         }
 
         function saveAllAnswers(answers,session_id){
+            sortedAnswers = answers.sort(function(a, b){
+                return a.id - b.id;
+            });
+            sortedAnswers.forEach(function(answer){delete answer.id;});
+            //TODO: if a user don't have to answer all the questions - we need the slideID for the next time. 
+            //otherwise - we don't need it and can to save all answers in a single array.
+            console.log(sortedAnswers);
             var data = {
-                results: answers,
+                results: sortedAnswers,
                 sessionId: session_id
             };
             $http.post("/submit",data).success(function(){

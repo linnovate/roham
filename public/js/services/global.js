@@ -24,7 +24,6 @@ angular.module('mean.system').factory("Global", ['storage', '$http',
             if (json){
                 _this._data.answers.push(json);
             }
-            console.log(_this._data.answers);
             return _this._data.answers;
         }
 
