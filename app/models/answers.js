@@ -12,12 +12,9 @@ var mongoose = require('mongoose'),
 var AnswersSchema = new Schema({
     sessionId: String,
     results: [{
-        slideId: String,
-        answers: [{
-            title: String,
-            body: String,
-            val: String
-        }]   
+        title: String,
+        body: String,
+        val: String
     }]
 });
 

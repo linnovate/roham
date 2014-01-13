@@ -59,6 +59,43 @@ exports.submit = function(req, res) {
 exports.exportToCSV = function(req, res) {
     Answers.find({}, function(err, answers){
         if (err) throw err; 
+        string = '';
+        for (var i=0; i<answers[0].results.length; i++){
+            console.log(answers[0].results[i]);
+            string += answers[0].results[i].title + ",";
+        }   
+        string += "\n";
+        for(var i=0; i<answers.length; i++){
+            for (var j=0; j<answers[i].results.length; j++){
+                string += answers[i].results[j].val + ",";
+            }
+            string += "\n"   
+        };
+        console.log(string);
+
+        //
+        var csv = require('csv');
+        var fs = require('fs');
+        csv()
+        .from.string(
+        string,
+        {comment: '#'} )
+        .to.path(__dirname+'/sample.csv')
+        .transform( function(row){
+          row.unshift(row.pop());
+          return row;
+        })
+        .on('record', function(row,index){
+          console.log('#'+index+' '+JSON.stringify(row));
+        })
+        .on('end', function(count){
+          console.log('Number of lines: '+count);
+        })
+        .on('error', function(error){
+          console.log(error.message);
+        });
+        
+
         res.jsonp(answers);
     });
 };

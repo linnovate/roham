@@ -14,7 +14,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
                 other_question = {"body" : name, "title" : "נושא נוסף בתחום ה" + name, "val" : ($scope.other) ? $scope.other : ""};
                 $scope.questions.push(other_question);
             }
-            Global.getAnswers({id: parseInt($scope.currentSlide) ,slideId: "slide-" + $scope.currentSlide, answers: $scope.questions});
+            Global.getAnswers({id: parseInt($scope.currentSlide), answers: $scope.questions});
         }
         
         $scope.gotoNext = function(){
@@ -43,7 +43,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
                 };
                 data.push(question);
             });
-            Global.getAnswers({id: 1, slideId: "slide-1", answers: data});
+            Global.getAnswers({id: 1, answers: data});
             $location.path("/slide/2");
         };
 
