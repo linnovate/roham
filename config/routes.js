@@ -88,6 +88,7 @@ module.exports = function(app, passport, auth) {
     var answers = require('../app/controllers/answers');
     app.post('/submit', answers.submit);
     app.get('/csv', answers.exportToCSV);
+    app.get('/results', answers.results);
 
     //Admin route
     var admin = require('../app/controllers/admin');

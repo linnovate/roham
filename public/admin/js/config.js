@@ -11,8 +11,8 @@ angular.module('roham-admin').config(['$routeProvider',
         when('/views', {
             templateUrl: 'admin/views/views.html'
         }).
-        when('/answers', {
-            templateUrl: 'admin/views/answers.html'
+        when('/results', {
+            templateUrl: 'admin/views/results.html'
         }).
         when('/views/:slideId', {
             templateUrl: 'admin/views/view.html'

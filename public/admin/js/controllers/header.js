@@ -8,7 +8,7 @@ angular.module('roham-admin.system').controller('HeaderController', ['$scope', '
         "title": "Views",
         "link": "views"
     }, {
-        "title": "Answers",
-        "link": "answers"
+        "title": "Results",
+        "link": "results"
     }];
 }]);

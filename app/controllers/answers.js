@@ -49,54 +49,57 @@ exports.submit = function(req, res) {
             answers.sessionId = req.body.sessionId;
         }
         answers.results = req.body.results;
-        console.log(answers);
         answers.save(function(err, doc) {
             console.log("saved", err, doc);
         });
     });
 };
 
-exports.exportToCSV = function(req, res) {
+exports.results = function(req, res) {
+
     Answers.find({}, function(err, answers){
         if (err) throw err; 
+        res.jsonp(answers);
+    });
+}
+
+exports.exportToCSV = function(req, res) {
+
+    var csv = require('csv');
+    var fs = require('fs');
+
+    limit = req.query.rows;
+    offset = parseInt(req.query.offset);
+    Answers.find().limit(limit).skip(offset)
+    .exec(function(err, answers){
+        if (err) throw err; 
+        
+        // init the data to export
         string = '';
+        //insert the first row - the titles
         for (var i=0; i<answers[0].results.length; i++){
-            console.log(answers[0].results[i]);
             string += answers[0].results[i].title + ",";
-        }   
+        }
         string += "\n";
-        for(var i=0; i<answers.length; i++){
+        
+         //insert the the values
+        for(i=0; i<answers.length; i++){
             for (var j=0; j<answers[i].results.length; j++){
                 string += answers[i].results[j].val + ",";
             }
-            string += "\n"   
-        };
-        console.log(string);
+            string += "\n";  
+        }
+        d = new Date();
+        fileName = d.getDate() + "-" + d.getMonth()+1 + "-" + d.getFullYear() + "-" + (offset+1) + '.csv';
+        var filePath = process.cwd() + '/public/exports/' +fileName;
 
-        //
-        var csv = require('csv');
-        var fs = require('fs');
         csv()
-        .from.string(
-        string,
-        {comment: '#'} )
-        .to.path(__dirname+'/sample.csv')
-        .transform( function(row){
-          row.unshift(row.pop());
-          return row;
-        })
-        .on('record', function(row,index){
-          console.log('#'+index+' '+JSON.stringify(row));
-        })
-        .on('end', function(count){
-          console.log('Number of lines: '+count);
-        })
-        .on('error', function(error){
-          console.log(error.message);
-        });
-        
+        .from.string(string)
+        .to.path(filePath);
 
-        res.jsonp(answers);
+        res.attachment(filePath);
+        res.setHeader('Content-Type', 'text/csv');
+        res.end(string);
     });
 };
 

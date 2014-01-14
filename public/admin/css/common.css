@@ -65,3 +65,16 @@ span.editable-span {
 .respect-newline {
     white-space: pre;
 }
+
+.btn.download{
+    margin: 0 10px;
+}
+.results table{
+    table-layout: fixed;
+}
+.results table td, .results table th{
+    width: 25px;
+    max-height: 100px;
+    overflow: hidden;
+    display: table-cell;
+}
