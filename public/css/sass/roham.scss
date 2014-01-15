@@ -202,6 +202,10 @@ body{
 		margin-top: 0.5em;
 	}
 
+	.btn_wrapper{
+		float: left;
+		width: 21.438em;
+	}
 	a.btn_link, button.btn_link {
 		@include direction;
 		border: none;	
@@ -427,10 +431,15 @@ body{
 
 }
 
-survey-question,.survey-question{
+survey-question,.survey-question, .slide_12{
 	width: 60%;
 	float: right;
 	margin-right: 25%;
+}
+.slide_12 .question-wrapper{
+	width: 100%;
+	float: right;
+	height: 9.4em;
 }
 
 
@@ -442,16 +451,28 @@ survey-question,.survey-question{
 	padding-bottom: 2%;
 	height: 85px;
 
-
+	
 	.question-title{		
 		font-weight: 700;
 		font-size: 20px;
+		width: 60%;
+		float: right;
+		direction: rtl;
 	}
 	.question-body{
 		font-size: 16px;
 		width: 60%;
 		text-align: right;
 		float: right;
+	}
+	.textarea-wrapper{
+		float: right;
+		clear: both;
+		margin-top: 10px;
+
+		textarea{
+			direction: rtl;
+		}
 	}
 
 	.inputs-wrapper{
@@ -623,6 +644,9 @@ survey-question,.survey-question{
 			margin-top: 3%;
 			textarea{
 				text-align: right;
+			}
+			textarea{
+				direction: rtl;
 			}
 		}
 	}

@@ -1,19 +1,25 @@
 <section class="slide slide_3" ng-controller="SlidesController">
     <div class="container-fluid">
-        <div class="row-fluid">
-            <div ng-repeat="question in slide.fields">
+        <div class="row-fluid slide_12">
+            <div ng-repeat="question in questions">
                 <div class="question-wrapper">
-                    <div class="question-title">{{question.name}}</div>
-                    <div class="question-body">{{question.label}}</div>
-                    <div class="row-fluid">
-                        <textarea ng-model="question.val"></textarea>
-                   </div>
+                    <div class="question-title">{{question.title}}</div>
+                    <div class="question-body">{{question.body}}</div>
+                        <div class="textarea-wrapper">
+                            <textarea ng-model="question.val || ''"></textarea>
+                        </div>
                 </div>
             </div>   
         </div>
 
-        <div class="row-fluid">
+        <div class="row-fluid btn_wrapper">
             <a class="btn_link" data-ng-click="goToEnd()">Next</a>
         </div>
     </div>
 </section>
+
+
+
+
+
+    
