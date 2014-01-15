@@ -64,12 +64,10 @@ exports.results = function(req, res) {
 }
 
 exports.exportToCSV = function(req, res) {
-
     var csv = require('csv');
     var fs = require('fs');
-
     limit = req.query.rows;
-    offset = parseInt(req.query.offset);
+    offset = req.query.offset ? parseInt(req.query.offset) : null;
     Answers.find().limit(limit).skip(offset)
     .exec(function(err, answers){
         if (err) throw err; 
@@ -90,7 +88,8 @@ exports.exportToCSV = function(req, res) {
             string += "\n";  
         }
         d = new Date();
-        fileName = d.getDate() + "-" + d.getMonth()+1 + "-" + d.getFullYear() + "-" + (offset+1) + '.csv';
+        offset = offset ? ("-" + offset++) : "";
+        fileName = d.getDate() + "-" + d.getMonth()+1 + "-" + d.getFullYear() + offset + '.csv';
         var filePath = process.cwd() + '/public/exports/' +fileName;
 
         csv()
