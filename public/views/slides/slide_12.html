@@ -6,7 +6,7 @@
                     <div class="question-title">{{question.title}}</div>
                     <div class="question-body">{{question.body}}</div>
                         <div class="textarea-wrapper">
-                            <textarea ng-model="question.val || ''"></textarea>
+                            <textarea rows="5" ng-init="question.val= question.val || ''" ng-model="question.val"></textarea>
                         </div>
                 </div>
             </div>   
@@ -16,10 +16,4 @@
             <a class="btn_link" data-ng-click="goToEnd()">Next</a>
         </div>
     </div>
-</section>
-
-
-
-
-
-    
+</section>    

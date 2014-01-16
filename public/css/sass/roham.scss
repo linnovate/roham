@@ -439,7 +439,7 @@ survey-question,.survey-question, .slide_12{
 .slide_12 .question-wrapper{
 	width: 100%;
 	float: right;
-	height: 9.4em;
+	height: auto;
 }
 
 
@@ -449,7 +449,8 @@ survey-question,.survey-question, .slide_12{
 	border-bottom: 1px solid #c6c6c6;
 	line-height: 1.3;
 	padding-bottom: 2%;
-	height: 85px;
+	height: auto;
+	min-height: 85px;
 
 	
 	.question-title{		
@@ -464,14 +465,16 @@ survey-question,.survey-question, .slide_12{
 		width: 60%;
 		text-align: right;
 		float: right;
+		direction: rtl;
 	}
 	.textarea-wrapper{
 		float: right;
 		clear: both;
-		margin-top: 10px;
+		margin-top: 0.625em;
 
 		textarea{
 			direction: rtl;
+			width: 30em;
 		}
 	}
 
@@ -493,13 +496,15 @@ survey-question,.survey-question, .slide_12{
 	// $slider-handle: url("../../img/assets/slider-handle.png");
 
 	.slider {
-		margin-left: -20px;
+		margin-left: -42px;
 	    position: relative;
-	    width: 210px;
+	    /*width: 210px;*/
+	    width: 255px;
 	    display: block;
 	    background-image: url("http://delfinamassun.files.wordpress.com/2011/09/light-grey-square.jpg");
 
 	    background-repeat: no-repeat;
+	    border: 0px solid rgba(0,0,0,0);
 	    
 	    /*@for $i from 0 through 100 {
 	        &.value-#{$i}{
@@ -508,30 +513,29 @@ survey-question,.survey-question, .slide_12{
 	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset #{$i/7}em 0 0 green
 	        }
 	    }*/
-	    	&.value-1{
+	    	&.value-0{
 	    		background-position: 0em;
-	            border: 0px solid rgba(0,0,0,0);
 	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 0em 0 0 green
 	    	}
-	    	&.value-2{
+	    	&.value-1{
 	    		background-position: 4em;
-	            border: 0px solid rgba(0,0,0,0);
 	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 4em 0 0 green
 	    	}
+	    	&.value-2{
+	    		background-position: 7em;
+	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 7em 0 0 green;
+	    	}
 	    	&.value-3{
-	    		background-position: 8em;
-	            border: 0px solid rgba(0,0,0,0);
-	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 8em 0 0 green
+	    		background-position: 11em;
+	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 11em 0 0 green
 	    	}
 	    	&.value-4{
-	    		background-position: 11em;
-	            border: 0px solid rgba(0,0,0,0);
-	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 11em 0 0 green
+	    		background-position: 14em;
+	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 14em 0 0 green
 	    	}
 	    	&.value-5{
 	    		background-position: 14.5em;
-	            border: 0px solid rgba(0,0,0,0);
-	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 14.5em 0 0 green
+	            box-shadow: 0 1px 0 rgba(255,255,255,0),inset 17.8em 0 0 green;
 	    	}
 	    
 	    height: 8px;
@@ -570,22 +574,22 @@ survey-question,.survey-question, .slide_12{
 				@include transition-property('opacity');
 				@include transition-duration('100ms');
 
-				&[value="0"]{
+				&[value="1"]{
 					width: 105px;
 					left: -50px;
 				}
-				&[value="25"]{
+				&[value="2"]{
 					width: 74px;
 					left: -35px;
 				}
-				&[value="50"]{
+				&[value="3"]{
 					width: 30px;
 				}
-				&[value="75"]{
+				&[value="4"]{
 					width: 55px;
 					left: -23px;
 				}
-				&[value="100"]{
+				&[value="5"]{
 					width: 88px;
 					left: -40px;
 				}
@@ -790,7 +794,7 @@ survey-question,.survey-question, .slide_12{
 .scale{
 	margin-top: 20px;
 	width: 255px;
-	margin-left: -63px;
+	margin-left: -40px;
 	
 	.scale-digit{
 		width: 20%;
