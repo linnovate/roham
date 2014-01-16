@@ -7,7 +7,6 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.slides = Slides;
         
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
-        console.log($scope.questions);
         function saveSlideAnswers(){
             if ($scope.currentSlide < 12){
                 name = $scope.slides.slidesOrder[parseInt(Slides.currentIndex)].label;
