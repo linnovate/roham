@@ -4,12 +4,19 @@
 			<h1 class="bigTitle">{{values['Title']}}</h1>
 			<h1>{{values['SubTitle']}}</h1>
 		</div>
-		<img src="../../img/background/israel-logo.1.png"/>
+		<img src="../../img/background/madad-main-logo.png"/>
 		<div>
 			<p>{{values['Question']}}</p>
-			<a href='{{values["Link-Share"]}}' class="btnFb fb"></a>
+			<a href='{{values["Link-Share"]}}' class="btnFb fb" target="_blank"></a>
 			<a href='{{values["Link-like"]}}' class="btnFb like"></a>
 		</div>
 	</div>
-	<a href='{{values["Link-url"]}}' class="endLink">{{values['Link']}}</a>
+	<div class="left">
+		<a href='{{values["Link-Url"]}}' class="endLink">{{values['Link']}}</a>
+	</div>
+	
+	<div class="credit right">
+		<p>{{values['Credit']}}</p>
+		<a href="#" target="_blank">&nbsp;</a>
+	</div>
 </section>
