@@ -11,6 +11,7 @@ var mongoose = require('mongoose'),
  */
 var AnswersSchema = new Schema({
     sessionId: String,
+    ip: String,
     results: [{
         title: String,
         body: String,

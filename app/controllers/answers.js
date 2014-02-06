@@ -40,7 +40,6 @@ var mongoose = require('mongoose'),
 
 exports.submit = function(req, res) {
     //Find session id entries
-    console.log(req.body);
     Answers.findOne({
         sessionId: req.body.sessionId
     }, function(err, answers) {
@@ -48,6 +47,7 @@ exports.submit = function(req, res) {
             answers = new Answers();
             answers.sessionId = req.body.sessionId;
         }
+        answers.ip = req.ip;
         answers.results = req.body.results;
         answers.save(function(err, doc) {
             console.log("saved", err, doc);
@@ -73,7 +73,7 @@ exports.exportToCSV = function(req, res) {
         if (err) throw err; 
         
         // init the data to export
-        string = '';
+        string = 'ip,';
         //insert the first row - the titles
         for (var i=0; i<answers[0].results.length; i++){
             string += answers[0].results[i].title + ",";
@@ -82,6 +82,7 @@ exports.exportToCSV = function(req, res) {
         
          //insert the the values
         for(i=0; i<answers.length; i++){
+            string += answers[i].ip + ",";
             for (var j=0; j<answers[i].results.length; j++){
                 string += answers[i].results[j].val + ",";
             }
