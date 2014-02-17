@@ -33,7 +33,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
 
         $scope.setFirstSlide = function(){
             var data = [];
-            var list = ["age", "kind", "education"];
+            var list = ["age", "kind", "education", "city"];
             angular.forEach(list,function(field) {
                 question = {
                     "body" : field,
