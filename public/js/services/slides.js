@@ -2,6 +2,7 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
     function($location, $http) {
         var _this = this;
         getQuestions();
+        getTitles();
 
         _this._obj = {
             currentSlide: 0,
@@ -85,6 +86,15 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             updateCurrentSlide: updateCurrentSlide
         };
 
+        function getTitles(){
+            $http.get('/cms/views/types').success(function(types) {
+                _this._obj.titles = {};
+                types.fields.forEach(function(title){
+                    _this._obj.titles[title.name] = title.label
+                })
+            });
+        }
+
         function getQuestions() {
             $http.get('/cms/views').success(function(slides) {
                 var newSlides = {};
@@ -95,7 +105,8 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
                         newQuestions.push({
                             title: question.name,
                             body: question.label,
-                            val: 0
+                            val: 0,
+                            type: question.type
                         });
                     });
 

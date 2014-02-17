@@ -235,7 +235,7 @@ body{
 	}
 
 	.body {
-		margin-top:30px;
+		/*margin-top:30px;*/
 		margin-bottom: 0px;
 		margin-left: auto;
 		margin-right: auto;
@@ -295,6 +295,7 @@ body{
 		margin-top: 1.375em;
 		width: 11.250em;
 		text-align: left;
+		direction: rtl;
 	}
 	.btn-group{
 		direction : rtl;
@@ -311,7 +312,7 @@ body{
 		font-family: alef;
 		/*font-size: 25px;*/
 	}
-	.kind , .status{
+	.kind , .status, .city{
 		margin-top:0.438em;
 	}
 	.btn_link_slide_1 {
@@ -411,8 +412,14 @@ body{
 	}
 
 }
+input.form-control{
+	width: 150px;
+	height: 30px;
+	margin-right: 0.813em;
+	direction: rtl;
+}
 
-.btn_grey{
+.btn_grey, .form-control{
 	background: url(../../img/buttons/grey-btt.png);
 	box-shadow:2px 2px 10px #1f5360;
 	@include transition-property('background');
@@ -431,7 +438,7 @@ body{
 
 }
 
-survey-question,.survey-question, .slide_12{
+survey-question,.survey-question, .slide_12, h5{
 	width: 60%;
 	float: right;
 	margin-right: 25%;
@@ -440,6 +447,9 @@ survey-question,.survey-question, .slide_12{
 	width: 100%;
 	float: right;
 	height: auto;
+}
+h5{
+	direction: rtl
 }
 
 

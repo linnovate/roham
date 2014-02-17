@@ -4,7 +4,12 @@
 	</h4>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<survey-question ng-repeat="question in questions" title="{{question.title}}" ng-model="question.val">{{question.body}} </survey-question>		
+			<h5>{{titles.personal}}</h5>
+			<survey-question ng-repeat="question in questions | filter:{type:'personal'}" title="{{question.title}}" ng-model="question.val">{{question.body}} </survey-question>
+		</div>	
+		<div class="row-fluid">
+			<h5 ng-show='filtered.length > 0'>{{titles.society}}</h5>
+			<survey-question ng-repeat="question in filtered = (questions | filter:{type:'society'})" title="{{question.title}}" ng-model="question.val">{{question.body}} </survey-question>	
 		</div>
 		<div class="row-fluid question-wrapper survey-question">
 			<div class="question-title">האם קיים נושא מרכזי המשפיע על איכות החיים שלך בהיבטי רמת החיים החומרית שצריך לפי דעתך להוסיף לרשימה?

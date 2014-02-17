@@ -1,10 +1,10 @@
 <section data-ng-controller="IndexController" ng-class="$root.transitionClass" class="slide slide_1">
     <div class="content_slide_1">
         <img src="../../img/background/israel-logo-blue.1.png" class="logo_img">
-        <h1 class="smallTitle">3 שאלות קצרות לפני שנתחיל</h1>
+        <h1 class="smallTitle">4 שאלות קצרות לפני שנתחיל, אנא סמנו את התשובה המתאימה:</h1>
         <div class="body center-block">
             <form>
-            <div class="title_ask">גיל</div>
+            <div class="title_ask">הגיל שלי הוא:</div>
             <div class="btn-group age">
 
                 <button type="button" class="btn btn_grey" ng-model="age" btn-radio="1">מתחת לגיל 18</button>
@@ -29,7 +29,7 @@
             </br>
             </br>
             </br>
-            <div class="title_ask">השכלה</div>
+            <div class="title_ask">ההשכלה שלי:</div>
             <div class="btn-group education">
 
                 <button type="button" class="btn btn_grey" ng-model="education" btn-radio="1">יסודי או חטיבת ביניים</button>
@@ -38,12 +38,21 @@
                 <button type="button" class="btn btn_grey" ng-model="education" btn-radio="4">על תיכוני</button>
                 <button type="button" class="btn btn_grey" ng-model="education" btn-radio="5">אקדמי</button>
             </div>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <div class="title_ask">יישוב מגוריי הוא:</div>
+            <div class="input-group input-group-lg city">
+                <input type="text" ng-model="city" class="form-control"/>
+            </div>
 
         </div>
         </form>
     </div>
     <div class="row-fluid btn_wrapper" data-ng-controller="SlidesController">
-            <button type="submit" class="btn_link" data-ng-click="setFirstSlide()" data-ng-disabled="!(age && kind && education)">Next</a>
+            <button type="submit" class="btn_link" data-ng-click="setFirstSlide()" data-ng-disabled="!(age && kind && education && city)">Next</a>
     </div>
     <!-- <a class="btn_link_slide_1" data-ng-click="gotoNext()">Next</a> -->
 </section>

@@ -1,12 +1,12 @@
 <section class="slide slide_2 slide_13" ng-controller="SlidesController" ng-init="getInitEndPage()">
 	<div class="content">
 		<div>
-			<h1 class="bigTitle">{{values['Title']}}</h1>
-			<h1>{{values['SubTitle']}}</h1>
+			<h1 class="bigTitle" ng-bind-html="values['Title']"></h1>
+			<h1 ng-bind-html="values['SubTitle']"></h1>
 		</div>
 		<img src="../../img/background/madad-main-logo.png"/>
 		<div>
-			<p>{{values['Question']}}</p>
+			<p ng-bind-html="values['Question']"></p>
 			<a href='{{values["Link-Share"]}}' class="btnFb fb" target="_blank"></a>
 			<a href='{{values["Link-like"]}}' class="btnFb like"></a>
 		</div>

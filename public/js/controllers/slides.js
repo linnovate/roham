@@ -5,7 +5,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.isActiveBtn = [false, false];
         $scope.currentSlide = $routeParams.slide_id;
         $scope.slides = Slides;
-        
+        $scope.titles = $scope.slides.titles;
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
         function saveSlideAnswers(){
             if ($scope.currentSlide < 12){

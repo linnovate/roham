@@ -8,7 +8,7 @@ window.app = angular.module('mean', [
 	'mean.system', 
 	'mean.articles', 
 	'mean.slides',
-	'angularLocalStorage']);
+	'angularLocalStorage', 'ngSanitize']);
 
 angular.module('mean.system', []);
 angular.module('mean.articles', []);

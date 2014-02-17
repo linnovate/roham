@@ -5,6 +5,7 @@
 		<div class="">
 			<input type="text" class="span12" data-ng-model="name" placeholder="name" id="name-add-title" autofocus />
 			<textarea class="span12" data-ng-model="label" placeholder="label" id="label-add-title"></textarea>
+			<input type="text" class="span12" data-ng-model="type" placeholder="type" id="type-add-title" />
 		 	<input type="submit" class="btn span2" value="Add"/>
 		</div>
 	</form>
@@ -39,8 +40,12 @@
 				<span class="editable-span" data-ng-editable-paragraph="update(view)" data-ng-editable-model="field.label"></span>
 			</td>
 			<td class="table-editable-cell">
+				<span class="editable-span" data-ng-editable="update(view)" data-ng-editable-model="field.type"></span>
+			</td>
+			<td class="table-editable-cell">
 				<span class="editable-span" data-ng-editable="update(view)" data-ng-editable-model="field.slideIdRef"></span>
 			</td>
+			
 		</tr>
 	</table>
 </section>

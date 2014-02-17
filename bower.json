@@ -14,6 +14,7 @@
     "jquery-ui": "~1.10.3",
     "angular-ui-router" : "latest",
     "angularLocalStorage" : "latest",
-    "bootstrap-assets" : "latest"
+    "bootstrap-assets" : "latest",
+    "angular-sanitize" : "1.0.6"
   }
 }

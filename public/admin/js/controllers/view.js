@@ -6,7 +6,8 @@ angular.module('roham-admin.views').controller('ViewController', ['$scope', '$ro
             $scope.view.fields.push({
                 name: this.name,
                 label: this.label,
-                slideIdRef: this.slideIdRef
+                slideIdRef: this.slideIdRef,
+                type: this.type
             });
             $scope.update();
 

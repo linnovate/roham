@@ -47,6 +47,11 @@ var ViewSchema = new Schema({
             type: String,
             default: '',
             trim: true
+        },
+        type: {
+            type: String,
+            default: 'personal',
+            trim: true
         }
     }],
     user: {
