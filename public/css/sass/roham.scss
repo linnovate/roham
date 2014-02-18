@@ -671,7 +671,7 @@ h4 small{
 }
 .slide_13 {
   direction: rtl;
-  padding-top: 80px;
+  padding-top: 0;
   .content {
      width: 62.250em;
      margin-left: auto;
@@ -765,7 +765,7 @@ h4 small{
 		.slide_3{
 			@include background(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwLjQyODAzOSIgc3RvcC1jb2xvcj0iI2VhZTllOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U0ZTJlMiIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTRlMmUyIiAvPjxyZWN0IHg9Ii0yNy4wOTU4JSIgeT0iLTQ3LjI3MDQlIiB3aWR0aD0iMTU0LjE5MTYlIiBoZWlnaHQ9IjE5NC41NDA4JSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=),
 				radial-gradient(farthest-side circle at center center, #eae9e9 66%, #e4e2e2 154.1916%));
-			padding-top: 80px;
+			/*padding-top: 80px;*/
 		}
 
 		&.ng-enter, &.ng-leave {
