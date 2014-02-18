@@ -1,8 +1,7 @@
 <section class="slide slide_3" ng-controller="SlidesController">
-	<h4>לפניך נושאים המשפיעים על איכות החיים בישראל בתחום התשתיות והדיור. <br/>
-	 סמן/סמני באיזו מידה הם משפיעים לדעתך על איכות החיים בישראל (1 - השפעה מועטה מאד; 5 - השפעה רבה מאד)
-	</h4>
+	
 	<div class="container-fluid">
+		<h4 ng-bind-html="introduction"></h4>	
 		<div class="row-fluid">
 			<h5>{{titles.personal}}</h5>
 			<survey-question ng-repeat="question in questions | filter:{type:'personal'}" title="{{question.title}}" ng-model="question.val">{{question.body}} </survey-question>
@@ -12,9 +11,10 @@
 			<survey-question ng-repeat="question in filtered = (questions | filter:{type:'society'})" title="{{question.title}}" ng-model="question.val">{{question.body}} </survey-question>	
 		</div>
 		<div class="row-fluid question-wrapper survey-question">
-			<div class="question-title">האם קיים נושא מרכזי המשפיע על איכות החיים שלך בתחום התשתיות והדיור שצריך לפי דעתך להוסיף לרשימה?
+			<div ng-repeat="question in questions | filter:{type:'other-question'}">
+				<div class="question-title">{{question.title}}</div>
+				<div class="textarea-wrapper"><textarea ng-model="question.val"></textarea></div>
 			</div>
-			<div class="textarea-wrapper"><textarea ng-model="other"></textarea></div>
 		</div>
 		<div class="row-fluid btn_wrapper">
 			<a class="btn_link" data-ng-click="gotoNext()">Next</a>

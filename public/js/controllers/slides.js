@@ -1,5 +1,5 @@
-angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeParams', '$location', 'Global', 'Slides','$http',
-    function($scope, $routeParams, $location, Global, Slides, $http) {
+angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeParams', '$location', 'Global', 'Slides','$http', '$filter',
+    function($scope, $routeParams, $location, Global, Slides, $http, $filter) {
         $scope.global = Global;
         $scope.transitionClass = Global.transitionClass;
         $scope.isActiveBtn = [false, false];
@@ -7,13 +7,11 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.slides = Slides;
         $scope.titles = $scope.slides.titles;
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
+       
+        $scope.introduction = Slides.introduction["slide-" + $scope.currentSlide];
+                
         function saveSlideAnswers(){
-            if ($scope.currentSlide < 12){
-                name = $scope.slides.slidesOrder[parseInt(Slides.currentIndex)].label;
-                other_question = {"body" : name, "title" : "נושא נוסף בתחום ה" + name, "val" : ($scope.other) ? $scope.other : ""};
-                $scope.questions.push(other_question);
-            }
-            Global.getAnswers({id: parseInt($scope.currentSlide), answers: $scope.questions});
+            Global.getAnswers({id: parseInt($scope.currentSlide), answers: $scope.questions});            
         }
         
         $scope.gotoNext = function(){
@@ -22,6 +20,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
             next = $scope.slides.slidesOrder[next_index].slide;
 
             $location.path("/slide/" + next);
+            
             Slides.updateCurrentSlide(next,next_index);
         };
 

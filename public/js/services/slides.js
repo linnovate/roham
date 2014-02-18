@@ -10,10 +10,10 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
             questions: {},
             slidesOrder: [
             {
-                slide: 3,
-                name: 'edu',
-                label: 'השכלה, חינוך וכישורים',
-                color: 'bright_turqioze',
+                slide: 5,
+                name: 'health',
+                label: 'בריאות',
+                color: 'purple',
                 questions: []
             },
             {
@@ -24,10 +24,10 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
                 questions: []
             }, 
             {
-                slide: 5,
-                name: 'health',
-                label: 'בריאות',
-                color: 'purple',
+                slide: 3,
+                name: 'edu',
+                label: 'השכלה, חינוך וכישורים',
+                color: 'bright_turqioze',
                 questions: []
             },
             {
@@ -97,21 +97,31 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
 
         function getQuestions() {
             $http.get('/cms/views').success(function(slides) {
+                var newIntroduction  = {};
                 var newSlides = {};
                 slides.forEach(function(slide){
+                    newIntroduction[slide.slideId] = slide.fields
                     var questions = slide.fields,
                         newQuestions = [];
                         questions.forEach(function(question){
-                        newQuestions.push({
-                            title: question.name,
-                            body: question.label,
-                            val: 0,
-                            type: question.type
-                        });
+                        if (["personal", "society", "other-question"].indexOf(question.type)  >-1){
+                            val = question.type == "other-question" ? "" : 0
+                            newQuestions.push({
+                                title: question.name,
+                                body: question.label,
+                                val: val,
+                                type: question.type
+                            });
+                        }
+                        else
+                            if(question.type == "introduction"){
+                                newIntroduction[slide.slideId] = question.label
+                            }
                     });
 
                     newSlides[slide.slideId] = newQuestions;
                 });
+                _this._obj.introduction = newIntroduction;
                 _this._obj.questions = newSlides;
             });
         }
