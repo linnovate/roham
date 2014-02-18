@@ -7,10 +7,14 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.slides = Slides;
         $scope.titles = $scope.slides.titles;
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
-       
+
+        $scope.otherQuestion = $scope.titles["other"].replace("x", $scope.titles[$scope.currentSlide]);
         $scope.introduction = $scope.titles["introduction"].replace("x", $scope.titles[$scope.currentSlide]);
                 
         function saveSlideAnswers(){
+            if ($scope.currentSlide > 2 && $scope.currentSlide < 12){
+                $scope.questions.push({title: "נושא נוסף בתחום " + $scope.titles[$scope.currentSlide],val: $scope.other});
+            }
             Global.getAnswers({id: parseInt($scope.currentSlide), answers: $scope.questions});            
         }
         

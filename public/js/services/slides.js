@@ -103,7 +103,7 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
                         newQuestions = [];
                         questions.forEach(function(question){
                         if (["personal", "society", "other-question"].indexOf(question.type)  >-1){
-                            val = question.type == "other-question" ? "" : 0
+                            val = question.type == "other-question" ? "" : 0;
                             newQuestions.push({
                                 title: question.name,
                                 body: question.label,
