@@ -8,7 +8,7 @@ angular.module('mean.slides').controller('SlidesController', ['$scope', '$routeP
         $scope.titles = $scope.slides.titles;
         $scope.questions = Slides.questions["slide-" + $scope.currentSlide];
        
-        $scope.introduction = Slides.introduction["slide-" + $scope.currentSlide];
+        $scope.introduction = $scope.titles["introduction"].replace("x", $scope.titles[$scope.currentSlide]);
                 
         function saveSlideAnswers(){
             Global.getAnswers({id: parseInt($scope.currentSlide), answers: $scope.questions});            

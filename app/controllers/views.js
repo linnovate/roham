@@ -11,7 +11,6 @@ var mongoose = require('mongoose'),
  * Find view by id
  */
 exports.view = function(req, res, next, slideId) {
-    console.log(slideId);
     View.findOne({slideId: slideId}, function(err, view) {
         if (err) return next(err);
         if (!view) return next(new Error('Failed to load view ' + slideId));

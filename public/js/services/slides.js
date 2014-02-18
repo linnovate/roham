@@ -97,10 +97,8 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
 
         function getQuestions() {
             $http.get('/cms/views').success(function(slides) {
-                var newIntroduction  = {};
                 var newSlides = {};
                 slides.forEach(function(slide){
-                    newIntroduction[slide.slideId] = slide.fields
                     var questions = slide.fields,
                         newQuestions = [];
                         questions.forEach(function(question){
@@ -113,15 +111,10 @@ angular.module('mean.slides').factory("Slides", ["$location", "$http",
                                 type: question.type
                             });
                         }
-                        else
-                            if(question.type == "introduction"){
-                                newIntroduction[slide.slideId] = question.label
-                            }
                     });
 
                     newSlides[slide.slideId] = newQuestions;
                 });
-                _this._obj.introduction = newIntroduction;
                 _this._obj.questions = newSlides;
             });
         }
