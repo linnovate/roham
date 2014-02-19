@@ -55,11 +55,10 @@ body{
 		position: relative;
 
 		.sidebar_wrapper{
+			@include transition(200ms);
 			position: absolute;
 			right: 0px;
-			@include transition-property('width');
-			@include transition-duration('100ms');
-			@include transition-timing-function('linear');
+			
 			width: 100%;
 			height: 100%;		
 			-webkit-backface-visibility: hidden;
@@ -77,8 +76,8 @@ body{
 			&.pink{ background-color: #ed2778; }
 
 			.sidebar_icon_wrapper{		
-				float: right;
-				position: relative;
+				position: absolute;
+						right:0;
 				.sidebar_icon{
 					max-width: 85%;	
 					margin-left: 7%;				
@@ -88,11 +87,12 @@ body{
 			.sidebar_label{	
 				float: left;	
 				color: white;
-				font-size: 2em;
+				font-size: 1.8em;
 				line-height: 1.2em;
 				vertical-align: middle;
-				padding-top: 8px;
-				text-align: center;
+				display:table-cell;
+				padding-right:100px;
+				text-align: right;
 				width: 0px;
 				display: none;
 				font-size:0px;
@@ -110,14 +110,9 @@ body{
 					top: 70%;
 					max-width: 300px;
 					background: rgba(0, 0, 0, 0.7);
-					-webkit-box-shadow: 0 -50px 10px rgba(0,0,0, 0.7);
-					-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-					box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-					-webkit-transform: rotate(-3deg);
-					-moz-transform: rotate(-3deg);
-					-o-transform: rotate(-3deg);
-					-ms-transform: rotate(-3deg);
-					transform: rotate(-3deg);
+					
+					@include box-shadow(0 15px 0px rgba(black, 0.1));					
+					@include transform(rotate(-3deg));
 				}
 			}
 		}		
@@ -138,8 +133,11 @@ body{
 				.sidebar_wrapper{
 					width: 350%;
 					right: 0px;
+					display:table;
+					vertical-align: middle;
 
 					.sidebar_icon_wrapper{
+						
 						display: block; 
 					}
 					
@@ -258,6 +256,11 @@ margin-left: 10%;
 		margin-bottom: 0px;
 		margin-left: auto;
 		margin-right: auto;
+		cursor: pointer;
+		@include transition(200ms);
+		&:hover {
+			@include transform(translateY(-2px));
+		}
 	}
 	.icons_img {
 		margin: 0 auto;
@@ -521,13 +524,7 @@ h4 small{
 	    background-repeat: no-repeat;
 	    border: 0px solid rgba(0,0,0,0);
 	    
-	    /*@for $i from 0 through 100 {
-	        &.value-#{$i}{
-	            background-position: #{$i/7}em;
-	            border: 0px solid rgba(0,0,0,0);
-	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset #{$i/7}em 0 0 green
-	        }
-	    }*/
+	   
 	    	&.value-0{
 	    		background-position: 0em;
 	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0), inset 0em 0 0 green
@@ -579,7 +576,8 @@ h4 small{
 				background: white;
 				border: 1px solid rgba(0, 0, 0, 0.31);
 				position: absolute;
-				top: -35px;
+				top: -55px;
+				text-align:center;
 				opacity: 0;
 				margin-bottom: 20px;
 				padding: 4px;
@@ -588,7 +586,21 @@ h4 small{
 
 				@include transition-property('opacity');
 				@include transition-duration('100ms');
-
+				.slider_tooltip:after {
+				    content: " ";
+				    display: block;
+				    background: white;
+				    width: 10px;
+				    height: 10px;
+				    position: absolute;
+				    bottom: -6px;
+				    left: 50%;
+				    margin-left: -5px;
+				    border-left: 1px solid rgba(0, 0, 0, 0.31);
+				    border-bottom: 1px solid rgba(0, 0, 0, 0.31);
+			    
+			    @include transform(rotate(-45deg));
+				}
 				&[value="1"]{
 					width: 105px;
 					left: -50px;
@@ -598,6 +610,7 @@ h4 small{
 					left: -35px;
 				}
 				&[value="3"]{
+					left:-23px;
 					width: 55px;
 				}
 				&[value="4"]{
@@ -826,7 +839,7 @@ h4 small{
 .scale{
 	margin-top: 20px;
 	width: 255px;
-	margin-left: -40px;
+	//margin-left: -40px;
 	
 	.scale-digit{
 		width: 20%;
